@@ -4,23 +4,20 @@ using UnityEngine;
 
 public class ExitCheck : MonoBehaviour
 {
-
-  public GameObject switcher;
-  public GameObject[] objects_to_move;
-  public int howManyObjectToMove;
-  public bool isEnd;
+  public bool openExit;
   public Sprite doorOpen;
   public Sprite doorClose;
+  private IsEnd[] allObjects;
 
   void Start()
   {
-   isEnd = false;
-   howManyObjectToMove = objects_to_move.Length;
+   openExit = false;
+   allObjects = GameObject.FindObjectsOfType<IsEnd>();
   }
 
   void Update()
   {
-   if(isEnd)
+   if(openExit)
    {
 	  GetComponent<SpriteRenderer>().sprite = doorOpen;
    }
@@ -28,22 +25,13 @@ public class ExitCheck : MonoBehaviour
    {
     GetComponent<SpriteRenderer>().sprite = doorClose;
    }
-   isEnd = true;
-   if(switcher??true)
+   openExit = true;
+   foreach(IsEnd obj in allObjects)
    {
-    if(switcher.GetComponent<SwitchController>().isOn == false)
-	  {
-	   isEnd = false;
-	  }
-   }
-   if(howManyObjectToMove > 0)
-   {
-    for(int i=0; i < howManyObjectToMove; i++)
+    if(obj.Done() == false)
     {
-     if(objects_to_move[i].GetComponent<PositionCheck>().correctPosition == false)
-     {
-      isEnd = false;
-     }
+      openExit = false;
+      break;
     }
    }
 }

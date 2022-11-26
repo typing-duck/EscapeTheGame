@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PositionCheck : MonoBehaviour
+public class PositionCheck : IsEnd
 {
     public bool correctPosition;
     public GameObject target;
+    override public bool Done()
+    {
+      return correctPosition;
+    }
 
     void Start()
     {
