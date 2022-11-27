@@ -291,6 +291,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3993265925886789407, guid: 102f5aafba52ac7da944f916c08e69f5, type: 3}
+      propertyPath: blackoutSwitcher
+      value: 
+      objectReference: {fileID: 1499681114}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 102f5aafba52ac7da944f916c08e69f5, type: 3}
 --- !u!1 &524657890

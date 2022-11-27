@@ -6,9 +6,17 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public Vector2 movement;
+    public GameObject blackoutSwitcher;
 
     void Update()
     {
+       if(blackoutSwitcher??true)
+       {
+        if(blackoutSwitcher.GetComponent<SwitchController>().isOn == true)
+        {
+          return;
+        }
+       }
        if(movement.y < 0.01 && movement.y > -0.01) //add abs
        {
         movement.x = Input.GetAxisRaw("Horizontal");
