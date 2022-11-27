@@ -1199,7 +1199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1266f59d462a8f7acbb35525307fe215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcherOn1: {fileID: 1499681114}
+  switcherOn1: {fileID: 817462627}
   switcherOn2: {fileID: 0}
   layerToMove: 4
 --- !u!1001 &817462624
@@ -2330,7 +2330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switcherOn1: {fileID: 817462627}
-  switcherOn2: {fileID: 0}
+  switcherOn2: {fileID: 1499681114}
   layerToMove: 2
 --- !u!1001 &1499681111
 PrefabInstance:
@@ -2592,7 +2592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switcherOn1: {fileID: 817462627}
-  switcherOn2: {fileID: 0}
+  switcherOn2: {fileID: 1499681114}
   layerToMove: 2
 --- !u!1 &2091721143
 GameObject:
@@ -2691,7 +2691,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1266f59d462a8f7acbb35525307fe215, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcherOn1: {fileID: 1499681114}
+  switcherOn1: {fileID: 817462627}
   switcherOn2: {fileID: 0}
   layerToMove: 4
 --- !u!1 &2106416635
