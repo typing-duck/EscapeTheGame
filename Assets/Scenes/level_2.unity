@@ -1397,6 +1397,7 @@ GameObject:
   - component: {fileID: 631576807}
   - component: {fileID: 631576809}
   - component: {fileID: 631576810}
+  - component: {fileID: 631576812}
   - component: {fileID: 631576811}
   m_Layer: 0
   m_Name: table_x
@@ -1529,11 +1530,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 631576806}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed365067ae0fe373bac1b9a263c636dc, type: 3}
+  m_Script: {fileID: 11500000, guid: 757fae1e16f4edd43b702bde5101226b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   correctPosition: 0
   target: {fileID: 1041766273}
+--- !u!114 &631576812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631576806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957a1edb73489b064ada7ad915941815, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &783524801 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1081277504531279042, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
