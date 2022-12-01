@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     {
        if(blackoutSwitcher??true)
        {
-        if(blackoutSwitcher.GetComponent<SwitchController>().isOn == true)
+        if(blackoutSwitcher.GetComponent<SwitchModel>().isOn == true)
         {
           return;
         }

@@ -1169,6 +1169,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6580013197640734976, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
   m_PrefabInstance: {fileID: 817462624}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &817462628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817462627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c74c6650a9e32bc837ed57d50cb3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  isPositionImportant: 0
+  shouldBeOn: 1
 --- !u!1 &827538027
 GameObject:
   m_ObjectHideFlags: 0
@@ -2372,6 +2387,21 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6580013197640734976, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
   m_PrefabInstance: {fileID: 1499681111}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1499681115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1499681114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c74c6650a9e32bc837ed57d50cb3d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  isPositionImportant: 0
+  shouldBeOn: 1
 --- !u!1 &1733115591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2806,7 +2836,6 @@ MonoBehaviour:
   colorSwitchers:
   - {fileID: 1499681114}
   - {fileID: 817462627}
-  colorPalette: []
   currentColorAdjustments: {fileID: 0}
 --- !u!1 &2121737806
 GameObject:

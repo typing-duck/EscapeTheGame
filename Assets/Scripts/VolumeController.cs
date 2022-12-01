@@ -28,15 +28,15 @@ public class VolumeController : MonoBehaviour
         }
       }
       */
-      if(volumeModel.colorSwitchers[0].GetComponent<SwitchController>().isOn == true)
+      if(volumeModel.colorSwitchers[0].GetComponent<SwitchModel>().isOn == true)
       {
         volumeView.ChangeColorFilter(volumeModel.currentColorAdjustments, volumeModel.grey);
       }
-      if(volumeModel.colorSwitchers[1].GetComponent<SwitchController>().isOn == true)
+      if(volumeModel.colorSwitchers[1].GetComponent<SwitchModel>().isOn == true)
       {
         volumeView.ChangeColorFilter(volumeModel.currentColorAdjustments, volumeModel.pink);
       }
-      if(volumeModel.colorSwitchers[0].GetComponent<SwitchController>().isOn == true && volumeModel.colorSwitchers[1].GetComponent<SwitchController>().isOn == true)
+      if(volumeModel.colorSwitchers[0].GetComponent<SwitchModel>().isOn == true && volumeModel.colorSwitchers[1].GetComponent<SwitchModel>().isOn == true)
       {
         volumeView.ChangeColorFilter(volumeModel.currentColorAdjustments, volumeModel.blended);
       }

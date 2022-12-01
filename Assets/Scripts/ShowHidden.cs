@@ -13,11 +13,11 @@ public class ShowHidden : MonoBehaviour
      GetComponent<SpriteRenderer>().sortingOrder = 0;
      if(switcherOn1??true)
      {
-      if(switcherOn1.GetComponent<SwitchController>().isOn)
+      if(switcherOn1.GetComponent<SwitchModel>().isOn)
       {
         if(switcherOn2??true)
         {
-         if(switcherOn2.GetComponent<SwitchController>().isOn)
+         if(switcherOn2.GetComponent<SwitchModel>().isOn)
          {
           GetComponent<SpriteRenderer>().sortingOrder = layerToMove;
          }
