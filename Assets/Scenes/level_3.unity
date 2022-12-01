@@ -295,7 +295,8 @@ PrefabInstance:
       propertyPath: blackoutSwitcher
       value: 
       objectReference: {fileID: 1499681114}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3993265925886789407, guid: 102f5aafba52ac7da944f916c08e69f5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 102f5aafba52ac7da944f916c08e69f5, type: 3}
 --- !u!1 &524657890
 GameObject:
