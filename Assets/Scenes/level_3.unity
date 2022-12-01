@@ -1001,7 +1001,9 @@ GameObject:
   m_Component:
   - component: {fileID: 698751151}
   - component: {fileID: 698751152}
-  - component: {fileID: 698751153}
+  - component: {fileID: 698751156}
+  - component: {fileID: 698751155}
+  - component: {fileID: 698751154}
   m_Layer: 0
   m_Name: small_o
   m_TagString: Untagged
@@ -1076,7 +1078,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &698751153
+--- !u!114 &698751154
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1085,12 +1087,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 698751150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1266f59d462a8f7acbb35525307fe215, type: 3}
+  m_Script: {fileID: 11500000, guid: 231dc47d0caf7d69c8aa61a8f264164e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &698751155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698751150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323494d20fb658a6987d762254ccb70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   switcherOn1: {fileID: 817462627}
   switcherOn2: {fileID: 0}
   layerToMove: 4
+--- !u!114 &698751156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 698751150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ed4499cd64dbda2bb85f4e1d910429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &817462624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2193,6 +2219,8 @@ GameObject:
   - component: {fileID: 1487718066}
   - component: {fileID: 1487718065}
   - component: {fileID: 1487718067}
+  - component: {fileID: 1487718070}
+  - component: {fileID: 1487718069}
   - component: {fileID: 1487718068}
   m_Layer: 0
   m_Name: big_o
@@ -2303,12 +2331,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1487718064}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1266f59d462a8f7acbb35525307fe215, type: 3}
+  m_Script: {fileID: 11500000, guid: 231dc47d0caf7d69c8aa61a8f264164e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcherOn1: {fileID: 817462627}
-  switcherOn2: {fileID: 1499681114}
+--- !u!114 &1487718069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487718064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323494d20fb658a6987d762254ccb70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switcherOn1: {fileID: 1499681114}
+  switcherOn2: {fileID: 817462627}
   layerToMove: 2
+--- !u!114 &1487718070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487718064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ed4499cd64dbda2bb85f4e1d910429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1499681111
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2503,6 +2555,8 @@ GameObject:
   - component: {fileID: 1956224350}
   - component: {fileID: 1956224349}
   - component: {fileID: 1956224351}
+  - component: {fileID: 1956224354}
+  - component: {fileID: 1956224353}
   - component: {fileID: 1956224352}
   m_Layer: 0
   m_Name: big_x
@@ -2613,12 +2667,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 1956224348}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1266f59d462a8f7acbb35525307fe215, type: 3}
+  m_Script: {fileID: 11500000, guid: 231dc47d0caf7d69c8aa61a8f264164e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcherOn1: {fileID: 817462627}
-  switcherOn2: {fileID: 1499681114}
+--- !u!114 &1956224353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956224348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323494d20fb658a6987d762254ccb70b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switcherOn1: {fileID: 1499681114}
+  switcherOn2: {fileID: 817462627}
   layerToMove: 2
+--- !u!114 &1956224354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956224348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ed4499cd64dbda2bb85f4e1d910429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2091721143
 GameObject:
   m_ObjectHideFlags: 0
@@ -2629,6 +2707,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2091721144}
   - component: {fileID: 2091721145}
+  - component: {fileID: 2091721148}
+  - component: {fileID: 2091721147}
   - component: {fileID: 2091721146}
   m_Layer: 0
   m_Name: small_x
@@ -2713,12 +2793,36 @@ MonoBehaviour:
   m_GameObject: {fileID: 2091721143}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1266f59d462a8f7acbb35525307fe215, type: 3}
+  m_Script: {fileID: 11500000, guid: 231dc47d0caf7d69c8aa61a8f264164e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2091721147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091721143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 323494d20fb658a6987d762254ccb70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   switcherOn1: {fileID: 817462627}
   switcherOn2: {fileID: 0}
   layerToMove: 4
+--- !u!114 &2091721148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2091721143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ed4499cd64dbda2bb85f4e1d910429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2106416635
 GameObject:
   m_ObjectHideFlags: 0
