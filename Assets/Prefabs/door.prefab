@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2097349074257287311}
   - component: {fileID: 2097349074257287310}
-  - component: {fileID: 948145323}
+  - component: {fileID: 5984849784984871584}
+  - component: {fileID: 7313411829393019190}
+  - component: {fileID: 2377451834156162194}
   m_Layer: 0
   m_Name: door
   m_TagString: Untagged
@@ -85,7 +87,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &948145323
+--- !u!114 &5984849784984871584
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,11 +96,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 2097349074257287305}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08cf6325c378d4f5d9b69fa79e172def, type: 3}
+  m_Script: {fileID: 11500000, guid: 2f86b7db4a05a7e798b205a0cd484326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcher: {fileID: 0}
-  object_to_move: {fileID: 0}
-  isEnd: 0
+--- !u!114 &7313411829393019190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097349074257287305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09c4e6409c3cd38a4afbcb32b2dc865e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  openExit: 0
   doorOpen: {fileID: 21300000, guid: 174e9d387613f2ebb8c54889d1988701, type: 3}
   doorClose: {fileID: 21300000, guid: 639b01b45a346310cb111be1bbc9b6bb, type: 3}
+  allObjects: []
+--- !u!114 &2377451834156162194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2097349074257287305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad714139afda175dfab64f31fedf650b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
