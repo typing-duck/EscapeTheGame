@@ -6,5 +6,10 @@ public class PlayerMovementModel : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public Vector2 movement;
-    public GameObject blackoutSwitcher;
+    public GameObject[] blackoutSwitchers;
+
+    void Start()
+    {
+      blackoutSwitchers = GameObject.FindGameObjectsWithTag("BlackoutSwitcher");
+    }
 }

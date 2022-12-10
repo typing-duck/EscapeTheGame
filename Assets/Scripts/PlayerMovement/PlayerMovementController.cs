@@ -13,9 +13,10 @@ public class PlayerMovementController : MonoBehaviour
 
     void Update()
     {
-       if(playerMovementModel.blackoutSwitcher??true)
+      
+      foreach(GameObject switcher in playerMovementModel.blackoutSwitchers)
        {
-        if(playerMovementModel.blackoutSwitcher.GetComponent<SwitchModel>().isOn == true)
+        if(switcher.GetComponent<SwitchModel>().isOn == true)
         {
           return;
         }

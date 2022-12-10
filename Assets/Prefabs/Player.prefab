@@ -169,11 +169,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7768833a8e5c42ddb3dfa28d072ccf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 1
+  MoveSpeed: 1.5
   rb: {fileID: 3993265925886789406}
   animator: {fileID: 3993265925886789409}
   movement: {x: 0, y: 0}
-  blackoutSwitcher: {fileID: 0}
+  blackoutSwitchers: []
 --- !u!114 &7441710565275481250
 MonoBehaviour:
   m_ObjectHideFlags: 0

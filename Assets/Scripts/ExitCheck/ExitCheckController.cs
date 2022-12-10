@@ -29,5 +29,13 @@ public class ExitCheckController : MonoBehaviour
       break;
     }
    }
-}
+  }
+
+  private void OnTriggerEnter2D(Collider2D collision)
+  {
+    if(exitCheckModel.openExit == true && collision.tag == "Player")
+    {
+      exitCheckView.LoadNextLevel();
+    }
+  }
 }

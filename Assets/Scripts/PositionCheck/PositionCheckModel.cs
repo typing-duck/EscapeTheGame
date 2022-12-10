@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PositionCheckModel : MonoBehaviour
 {
+    [HideInInspector] 
     public bool correctPosition;
     public GameObject target;
 
