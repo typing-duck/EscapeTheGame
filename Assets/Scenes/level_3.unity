@@ -208,12 +208,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1499681112}
+      objectReference: {fileID: 1010149092}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -227,8 +227,12 @@ PrefabInstance:
       value: SwitchController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1499681115}
+    - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: SwitchModel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842807, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: m_Name
@@ -249,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3993265925886789404, guid: 102f5aafba52ac7da944f916c08e69f5, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3993265925886789404, guid: 102f5aafba52ac7da944f916c08e69f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1177,19 +1181,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
---- !u!114 &817462625 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1081277504531279042, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
-  m_PrefabInstance: {fileID: 817462624}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 817462627}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 997bcd620a46a0c348e18f47b252a4c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &817462626 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6580013197640734982, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
@@ -1770,6 +1764,50 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1010149091
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1010149093}
+  - component: {fileID: 1010149092}
+  m_Layer: 0
+  m_Name: Controllers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1010149092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010149091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 997bcd620a46a0c348e18f47b252a4c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &1010149093
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1010149091}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.022040233, y: 3.3024912, z: -7.708533}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1025630106
 GameObject:
   m_ObjectHideFlags: 0
@@ -1803,7 +1841,7 @@ Transform:
   - {fileID: 1325922048}
   - {fileID: 827538032}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1068404623
 PrefabInstance:
@@ -1887,7 +1925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2097349074257287311, guid: 28054f2f2c78b2eedbad7536cff8b057, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2097349074257287311, guid: 28054f2f2c78b2eedbad7536cff8b057, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2016,12 +2054,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 817462625}
+      objectReference: {fileID: 1010149092}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2035,8 +2073,12 @@ PrefabInstance:
       value: SwitchController, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
+      propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 817462628}
+    - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: SwitchModel, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842807, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: m_Name
@@ -2237,7 +2279,7 @@ Transform:
   - {fileID: 585537531}
   - {fileID: 2106416638}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1487718064
 GameObject:
@@ -2453,17 +2495,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
---- !u!114 &1499681112 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1081277504531279042, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
-  m_PrefabInstance: {fileID: 1499681111}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499681114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 997bcd620a46a0c348e18f47b252a4c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1499681113 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6580013197640734982, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
@@ -2520,7 +2551,7 @@ Transform:
   - {fileID: 1487718066}
   - {fileID: 1956224350}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1760447007
 PrefabInstance:
@@ -3021,7 +3052,7 @@ Transform:
   - {fileID: 960049421}
   - {fileID: 524657891}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2129067177
 GameObject:
@@ -3362,7 +3393,7 @@ Transform:
   - {fileID: 1499681113}
   - {fileID: 817462626}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2143705556 stripped
 Transform:
