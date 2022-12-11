@@ -6,39 +6,32 @@ using UnityEngine.Rendering.Universal;
 
 public class VolumeController : MonoBehaviour
 {
-    private VolumeModel volumeModel;
+    private VolumeModel[] volumeModels;
     private VolumeView volumeView;
    
    void Start()
    {
-    volumeModel = GameObject.FindObjectOfType<VolumeModel>();
+    volumeModels = GameObject.FindObjectsOfType<VolumeModel>();
     volumeView = GameObject.FindObjectOfType<VolumeView>();
    }
 
-    // Update is called once per frame
     void Update()
     {
-      volumeView.ChangeColorFilter(volumeModel.currentColorAdjustments, volumeModel.white);
-      /*
-      for(int i = 0; i < volumeModel.colorSwitchers.Length; i++)
+      foreach(VolumeModel model in volumeModels)
       {
-        if(volumeModel.colorSwitchers[i].GetComponent<SwitchController>().isOn == true)
-        {
-          volumeView.ChangeColorFilter(volumeModel.currentColorAdjustments, volumeModel.colorPalette[i]);
-        }
-      }
-      */
-      if(volumeModel.colorSwitchers[0].GetComponent<SwitchModel>().isOn == true)
-      {
-        volumeView.ChangeColorFilter(volumeModel.currentColorAdjustments, volumeModel.grey);
-      }
-      if(volumeModel.colorSwitchers[1].GetComponent<SwitchModel>().isOn == true)
-      {
-        volumeView.ChangeColorFilter(volumeModel.currentColorAdjustments, volumeModel.pink);
-      }
-      if(volumeModel.colorSwitchers[0].GetComponent<SwitchModel>().isOn == true && volumeModel.colorSwitchers[1].GetComponent<SwitchModel>().isOn == true)
-      {
-        volumeView.ChangeColorFilter(volumeModel.currentColorAdjustments, volumeModel.blended);
+       volumeView.ChangeColorFilter(model.currentColorAdjustments, model.white);
+       if(model.colorSwitchers[0].GetComponent<SwitchModel>().isOn == true)
+       {
+         volumeView.ChangeColorFilter(model.currentColorAdjustments, model.grey);
+       }
+       if(model.colorSwitchers[1].GetComponent<SwitchModel>().isOn == true)
+       {
+         volumeView.ChangeColorFilter(model.currentColorAdjustments, model.pink);
+       }
+       if(model.colorSwitchers[0].GetComponent<SwitchModel>().isOn == true && model.colorSwitchers[1].GetComponent<SwitchModel>().isOn == true)
+       {
+         volumeView.ChangeColorFilter(model.currentColorAdjustments, model.blended);
+       }
       }
     }
 }

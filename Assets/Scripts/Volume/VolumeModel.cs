@@ -12,9 +12,6 @@ public class VolumeModel : MonoBehaviour
     public Color32 blended = new Color32(125, 65, 140, 255);
 
     public GameObject[] colorSwitchers;
-    //[HideInInspector]
-    //public List<Color32> colorPalette = new List<Color32>(2);
-    //public Color32[] colorPalette = new Color32[10];
 
     private Volume currentVolume;
     [HideInInspector] 
@@ -24,8 +21,6 @@ public class VolumeModel : MonoBehaviour
     {
       currentVolume = GetComponent<Volume>();
       currentVolume.profile.TryGet(out currentColorAdjustments);
-      //colorPalette[0] = grey;
-      //colorPalette[1] = pink;
     }
 
 }
