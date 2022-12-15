@@ -7,8 +7,8 @@ public class PlayerMovementController : MonoBehaviour
 
     void Start()
     {
-      playerMovementModel = GetComponent<PlayerMovementModel>();
-      playerMovementView = GetComponent<PlayerMovementView>();
+      playerMovementModel = GameObject.FindObjectOfType<PlayerMovementModel>();
+      playerMovementView = GameObject.FindObjectOfType<PlayerMovementView>();
     }
 
     void Update()
