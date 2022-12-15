@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2097349074257287311}
   - component: {fileID: 2097349074257287310}
-  - component: {fileID: 5984849784984871584}
   - component: {fileID: 7313411829393019190}
-  - component: {fileID: 2377451834156162194}
   - component: {fileID: -2121835330616479885}
   m_Layer: 0
   m_Name: door
@@ -88,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5984849784984871584
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097349074257287305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f86b7db4a05a7e798b205a0cd484326, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7313411829393019190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,18 +102,7 @@ MonoBehaviour:
   doorOpen: {fileID: 21300000, guid: 174e9d387613f2ebb8c54889d1988701, type: 3}
   doorClose: {fileID: 21300000, guid: 639b01b45a346310cb111be1bbc9b6bb, type: 3}
   allObjects: []
---- !u!114 &2377451834156162194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2097349074257287305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad714139afda175dfab64f31fedf650b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  nextLevel: 0
 --- !u!61 &-2121835330616479885
 BoxCollider2D:
   m_ObjectHideFlags: 0

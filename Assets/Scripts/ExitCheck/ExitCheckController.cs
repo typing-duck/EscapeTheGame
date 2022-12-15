@@ -6,19 +6,26 @@ public class ExitCheckController : MonoBehaviour
 {
   private ExitCheckModel exitCheckModel;
   private ExitCheckView exitCheckView;
+  private GameObject door;
 
   void Start()
   {
-   exitCheckModel = GetComponent<ExitCheckModel>();
-   exitCheckView = GetComponent<ExitCheckView>();
+   exitCheckModel = GameObject.FindObjectOfType<ExitCheckModel>();
+   exitCheckView = GameObject.FindObjectOfType<ExitCheckView>();
+   door = GameObject.FindGameObjectWithTag("Door");
   }
 
   void Update()
   {
-   exitCheckView.ChangeSprite(GetComponent<SpriteRenderer>(), exitCheckModel.doorClose);
+   if(exitCheckModel.nextLevel == true)
+   {
+    exitCheckView.LoadNextLevel();
+   }
+
+   exitCheckView.ChangeSprite(door.GetComponent<SpriteRenderer>(), exitCheckModel.doorClose);
    if(exitCheckModel.openExit)
    {
-	  exitCheckView.ChangeSprite(GetComponent<SpriteRenderer>(), exitCheckModel.doorOpen);
+	  exitCheckView.ChangeSprite(door.GetComponent<SpriteRenderer>(), exitCheckModel.doorOpen);
    }
    exitCheckModel.openExit = true;
    foreach(IsEnd obj in exitCheckModel.allObjects)
@@ -29,13 +36,5 @@ public class ExitCheckController : MonoBehaviour
       break;
     }
    }
-  }
-
-  private void OnTriggerEnter2D(Collider2D collision)
-  {
-    if(exitCheckModel.openExit == true && collision.tag == "Player")
-    {
-      exitCheckView.LoadNextLevel();
-    }
   }
 }

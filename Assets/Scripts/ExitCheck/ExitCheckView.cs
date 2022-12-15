@@ -12,6 +12,9 @@ public class ExitCheckView : MonoBehaviour
 
   public void LoadNextLevel()
   {
-   SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+   if(SceneManager.GetActiveScene().buildIndex < 2)
+   {
+    SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+   }
   }
 }
