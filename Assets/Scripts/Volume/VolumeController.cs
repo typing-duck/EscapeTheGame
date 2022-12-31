@@ -6,33 +6,40 @@ using UnityEngine.Rendering.Universal;
 
 public class VolumeController : MonoBehaviour
 {
-    private VolumeModel[] volumeModels;
-    private VolumeView volumeView;
-   
-   void Start()
-   {
-    volumeModels = GameObject.FindObjectsOfType<VolumeModel>();
-    volumeView = GameObject.FindObjectOfType<VolumeView>();
-   }
+    private VolumeModel model;
+    private VolumeView view;
+
+    void Start()
+    {
+      model = gameObject.AddComponent<VolumeModel>();
+      view = gameObject.AddComponent<VolumeView>();
+    }
 
     void Update()
     {
-      foreach(VolumeModel model in volumeModels)
-      {
-       volumeView.ChangeColorFilter(model.currentColorAdjustments, model.white);
-       if(model.colorSwitchers[0].GetComponent<SwitchModel>().isOn == true)
+       Color32 grey = model.grey;
+       view.ChangeColorFilter(model.currentColorAdjustments, model.white);
+       int many = 0;
+       foreach(GameObject switcher in model.colorSwitchers)
        {
-         volumeView.ChangeColorFilter(model.currentColorAdjustments, model.grey);
+         if(switcher.GetComponent<SwitchModel>().isOn == true)
+           {
+            if(switcher.tag.Contains("Grey"))
+              {
+               many++;
+               view.ChangeColorFilter(model.currentColorAdjustments, model.grey);
+              }
+            if(switcher.tag.Contains("Pink"))
+              {
+               many++;
+               view.ChangeColorFilter(model.currentColorAdjustments, model.pink);
+              }
+            if(many == 2)
+              {
+               view.ChangeColorFilter(model.currentColorAdjustments, model.blended);
+              }
+           }
        }
-       if(model.colorSwitchers[1].GetComponent<SwitchModel>().isOn == true)
-       {
-         volumeView.ChangeColorFilter(model.currentColorAdjustments, model.pink);
-       }
-       if(model.colorSwitchers[0].GetComponent<SwitchModel>().isOn == true && model.colorSwitchers[1].GetComponent<SwitchModel>().isOn == true)
-       {
-         volumeView.ChangeColorFilter(model.currentColorAdjustments, model.blended);
-       }
-      }
     }
 }
 

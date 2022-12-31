@@ -11,7 +11,7 @@ public class VolumeModel : MonoBehaviour
     public Color32 white = new Color32(255, 255, 255, 255);
     public Color32 blended = new Color32(125, 65, 140, 255);
 
-    public GameObject[] colorSwitchers;
+    public List<GameObject> colorSwitchers = new List<GameObject>();
 
     private Volume currentVolume;
     [HideInInspector] 
@@ -21,6 +21,15 @@ public class VolumeModel : MonoBehaviour
     {
       currentVolume = GetComponent<Volume>();
       currentVolume.profile.TryGet(out currentColorAdjustments);
+
+      GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
+      foreach(GameObject obj in allObjects)
+      {
+        if(obj.tag.Contains("Color"))
+        {
+          colorSwitchers.Add(obj);
+        }
+      }
     }
 
 }

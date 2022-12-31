@@ -6,6 +6,10 @@ TagManager:
   tags:
   - BlackoutSwitcher
   - Door
+  - Blackout_Color0
+  - Color1
+  - Blackout_ColorGrey
+  - ColorPink
   layers:
   - Default
   - TransparentFX

@@ -1103,6 +1103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: switch_right
       objectReference: {fileID: 0}
+    - target: {fileID: 6580013197640734976, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
+      propertyPath: m_TagString
+      value: ColorPink
+      objectReference: {fileID: 0}
     - target: {fileID: 6580013197640734982, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1727,7 +1731,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1010149093}
   - component: {fileID: 1010149092}
-  - component: {fileID: 1010149094}
   - component: {fileID: 1010149095}
   - component: {fileID: 1010149096}
   - component: {fileID: 1010149097}
@@ -1766,18 +1769,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1010149094
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010149091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56652cc2c1b845bb99e7c6624b36de62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1010149095
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2250,7 +2241,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1408579689}
-  - component: {fileID: 1408579690}
   - component: {fileID: 1408579691}
   - component: {fileID: 1408579692}
   - component: {fileID: 1408579693}
@@ -2276,18 +2266,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1408579690
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1408579688}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 237aa9ec61560f1538805a37eba2f723, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1408579691
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2465,7 +2443,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6580013197640734976, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
       propertyPath: m_TagString
-      value: BlackoutSwitcher
+      value: Blackout_ColorGrey
       objectReference: {fileID: 0}
     - target: {fileID: 6580013197640734982, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
       propertyPath: m_RootOrder
@@ -2869,6 +2847,7 @@ GameObject:
   - component: {fileID: 2106416637}
   - component: {fileID: 2106416636}
   - component: {fileID: 2106416641}
+  - component: {fileID: 2106416642}
   m_Layer: 0
   m_Name: Global Volume
   m_TagString: Untagged
@@ -2928,7 +2907,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2106416635}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1430de996b4c07035b0a1e13075dcb8e, type: 3}
   m_Name: 
@@ -2949,6 +2928,18 @@ MonoBehaviour:
   - {fileID: 1499681114}
   - {fileID: 817462627}
   currentColorAdjustments: {fileID: 0}
+--- !u!114 &2106416642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106416635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56652cc2c1b845bb99e7c6624b36de62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2121737806
 GameObject:
   m_ObjectHideFlags: 0
