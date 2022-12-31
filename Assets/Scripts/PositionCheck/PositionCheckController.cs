@@ -13,14 +13,13 @@ public class PositionCheckController : IsEnd
 
     override public bool Done()
     {
-      bool result = true;
       foreach(PositionCheckModel model in positionCheckModels)
       {
         if(model.correctPosition == false)
         {
-          result = false;
+          return false;
         }
       }
-      return result;
+      return true;
     }
 }

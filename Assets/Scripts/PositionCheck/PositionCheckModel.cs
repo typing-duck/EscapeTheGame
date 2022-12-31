@@ -18,7 +18,7 @@ public class PositionCheckModel : MonoBehaviour
       if(collision.transform.position == target.transform.position)
       {
        correctPosition = true;
-	   Debug.Log("Object at target position");
+	     Debug.Log("Object at target position");
       }
     }
 
@@ -27,7 +27,7 @@ public class PositionCheckModel : MonoBehaviour
       if(collision.transform.position == target.transform.position)
       {
        correctPosition = false;
-	   Debug.Log("Object not at target position");
+	     Debug.Log("Object not at target position");
       }
      }
 }
