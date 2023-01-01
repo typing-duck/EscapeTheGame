@@ -11,10 +11,8 @@ public class SwitchModel : MonoBehaviour
    public bool isInRange;
    public KeyCode interactKey = KeyCode.E; 
 
-   private SwitchController controller;
-
    void Start()
     {
-      controller = gameObject.AddComponent<SwitchController>();
+      gameObject.AddComponent<SwitchController>();
     }
 }
