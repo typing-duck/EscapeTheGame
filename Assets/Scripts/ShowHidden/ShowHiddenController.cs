@@ -4,37 +4,34 @@ using UnityEngine;
 
 public class ShowHiddenController : MonoBehaviour
 {
-    private ShowHiddenModel[] showHiddenModels;
-    private ShowHiddenView showHiddenView;
+  private ShowHiddenModel model;
+  private ShowHiddenView view;
 
-    void Start()
-    {
-      showHiddenModels = GameObject.FindObjectsOfType<ShowHiddenModel>();
-      showHiddenView = GameObject.FindObjectOfType<ShowHiddenView>();
-    }
+  void Start()
+  {
+   model = gameObject.GetComponent<ShowHiddenModel>();
+   view = gameObject.GetComponent<ShowHiddenView>();
+  }
 
-    void Update()
-    {
-      foreach(ShowHiddenModel model in showHiddenModels)
+  void Update()
+  {
+    view.MoveToLayer(model.spriteRenderer, 0);
+    if(model.switcherOn1??true)
       {
-       showHiddenView.MoveToLayer(model.spriteRenderer, 0);
-       if(model.switcherOn1??true)
-       {
-        if(model.switcherOn1.GetComponent<SwitchModel>().isOn)
-        {
+       if(model.switcherOn1.GetComponent<SwitchModel>().isOn)
+         {
           if(model.switcherOn2??true)
-          {
-           if(model.switcherOn2.GetComponent<SwitchModel>().isOn)
-           {
-            showHiddenView.MoveToLayer(model.spriteRenderer, model.layerToMove);
-           }
-          }
+            {
+             if(model.switcherOn2.GetComponent<SwitchModel>().isOn)
+               {
+                view.MoveToLayer(model.spriteRenderer, model.layerToMove);
+               }
+            }
           else
-          {
-           showHiddenView.MoveToLayer(model.spriteRenderer, model.layerToMove);
-          }
-        }   
-       }
+            {
+             view.MoveToLayer(model.spriteRenderer, model.layerToMove);
+            }
+         }   
       }
-    }
+  }
 }
