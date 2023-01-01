@@ -15,7 +15,11 @@ public class ExitCheckModel : MonoBehaviour
   {
    openExit = false;
    nextLevel = false;
-   allObjects = GameObject.FindObjectsOfType<IsEnd>();
+  }
+
+  void Update()
+  {
+    allObjects = GameObject.FindObjectsOfType<IsEnd>();
   }
 
   private void OnTriggerEnter2D(Collider2D collision)

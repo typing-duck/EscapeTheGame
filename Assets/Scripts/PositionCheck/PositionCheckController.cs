@@ -4,22 +4,33 @@ using UnityEngine;
 
 public class PositionCheckController : IsEnd
 {
-    private PositionCheckModel[] positionCheckModels;
+    private PositionCheckModel model;
 
     void Start()
     {
-      positionCheckModels = GameObject.FindObjectsOfType<PositionCheckModel>();
+      model = gameObject.GetComponent<PositionCheckModel>();
     }
 
     override public bool Done()
     {
-      foreach(PositionCheckModel model in positionCheckModels)
-      {
-        if(model.correctPosition == false)
-        {
-          return false;
-        }
-      }
-      return true;
+      return model.correctPosition;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+     {
+      if(collision.transform.position == model.target.transform.position)
+      {
+       model.correctPosition = true;
+	     Debug.Log("Object at target position");
+      }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+     {
+      if(collision.transform.position == model.target.transform.position)
+      {
+       model.correctPosition = false;
+	     Debug.Log("Object not at target position");
+      }
+     }
 }
