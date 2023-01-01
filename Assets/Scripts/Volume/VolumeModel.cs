@@ -19,6 +19,9 @@ public class VolumeModel : MonoBehaviour
 
     void Start()
     {
+      gameObject.AddComponent<VolumeController>();
+      gameObject.AddComponent<VolumeView>();
+
       currentVolume = GetComponent<Volume>();
       currentVolume.profile.TryGet(out currentColorAdjustments);
 

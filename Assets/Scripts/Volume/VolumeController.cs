@@ -6,14 +6,14 @@ using UnityEngine.Rendering.Universal;
 
 public class VolumeController : MonoBehaviour
 {
-    private VolumeModel model;
-    private VolumeView view;
+  private VolumeModel model;
+  private VolumeView view;
 
-    void Start()
-    {
-      model = gameObject.AddComponent<VolumeModel>();
-      view = gameObject.AddComponent<VolumeView>();
-    }
+  void Start()
+  {
+   model = gameObject.GetComponent<VolumeModel>();
+   view = gameObject.GetComponent<VolumeView>();
+  }
 
     void Update()
     {
