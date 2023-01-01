@@ -208,12 +208,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1010149092}
+      objectReference: {fileID: 1499681115}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -229,10 +229,10 @@ PrefabInstance:
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 1499681115}
+      objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: SwitchModel, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842807, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: m_Name
@@ -1173,12 +1173,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 817462627}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c74c6650a9e32bc837ed57d50cb3d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 997bcd620a46a0c348e18f47b252a4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
-  isPositionImportant: 0
-  shouldBeOn: 1
 --- !u!1 &827538027
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,7 +1727,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1010149093}
-  - component: {fileID: 1010149092}
   - component: {fileID: 1010149095}
   - component: {fileID: 1010149096}
   - component: {fileID: 1010149097}
@@ -1742,18 +1738,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1010149092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010149091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 997bcd620a46a0c348e18f47b252a4c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1010149093
 Transform:
   m_ObjectHideFlags: 0
@@ -2051,12 +2035,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1010149092}
+      objectReference: {fileID: 817462628}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
@@ -2072,10 +2056,10 @@ PrefabInstance:
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 817462628}
+      objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842806, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: interactAction.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: SwitchModel, Assembly-CSharp
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 8667902605646842807, guid: d4004546fbddda4a89906afcf24162f0, type: 3}
       propertyPath: m_Name
@@ -2510,12 +2494,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1499681114}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 55c74c6650a9e32bc837ed57d50cb3d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 997bcd620a46a0c348e18f47b252a4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isOn: 0
-  isPositionImportant: 0
-  shouldBeOn: 1
 --- !u!1 &1733115591
 GameObject:
   m_ObjectHideFlags: 0

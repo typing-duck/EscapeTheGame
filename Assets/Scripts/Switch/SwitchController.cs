@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class SwitchController : IsEnd
 {
-   override public bool Done()
+  private SwitchModel model;
+
+  void Start()
     {
-      SwitchModel[] switchModels = GameObject.FindObjectsOfType<SwitchModel>();
-      foreach(SwitchModel model in switchModels)
-      {
-       if(model.isPositionImportant == true && model.isOn != model.shouldBeOn)
-         {
-          return false;
-         }
-      }
-      return true;
+      model = gameObject.AddComponent<SwitchModel>();
+    }
+
+  override public bool Done()
+    {
+     if(model.isPositionImportant == true && model.isOn != model.shouldBeOn)
+        {
+         return false;
+        }
+     return true;
     }
    
-   public void Switch(SwitchModel switchModel)
+  public void Switch()
    {
-     switchModel.isOn = !switchModel.isOn;
+     model.isOn = !model.isOn;
      Debug.Log("Change");
    }
 }
