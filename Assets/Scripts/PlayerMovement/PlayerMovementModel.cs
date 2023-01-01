@@ -11,6 +11,8 @@ public class PlayerMovementModel : MonoBehaviour
 
     void Start()
     {
+      gameObject.AddComponent<PlayerMovementController>();
+      gameObject.AddComponent<PlayerMovementView>();
       GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
       foreach(GameObject obj in allObjects)
       {

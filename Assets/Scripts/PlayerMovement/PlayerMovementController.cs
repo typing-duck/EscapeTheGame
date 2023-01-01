@@ -2,40 +2,40 @@ using UnityEngine;
 
 public class PlayerMovementController : MonoBehaviour
 {
-    private PlayerMovementModel playerMovementModel;
-    private PlayerMovementView playerMovementView;
+    private PlayerMovementModel model;
+    private PlayerMovementView view;
 
     void Start()
     {
-      playerMovementModel = GameObject.FindObjectOfType<PlayerMovementModel>();
-      playerMovementView = GameObject.FindObjectOfType<PlayerMovementView>();
+     model = gameObject.GetComponent<PlayerMovementModel>();
+     view = gameObject.GetComponent<PlayerMovementView>();
     }
 
     void Update()
     {
       
-      foreach(GameObject switcher in playerMovementModel.blackoutSwitchers)
+      foreach(GameObject switcher in model.blackoutSwitchers)
        {
         if(switcher.GetComponent<SwitchModel>().isOn == true)
         {
           return;
         }
        }
-       if(playerMovementModel.movement.y < 0.01 && playerMovementModel.movement.y > -0.01) //add abs
+       if(model.movement.y < 0.01 && model.movement.y > -0.01) //add abs
        {
-        playerMovementModel.movement.x = Input.GetAxisRaw("Horizontal");
+        model.movement.x = Input.GetAxisRaw("Horizontal");
        }
-       if(playerMovementModel.movement.x < 0.01 && playerMovementModel.movement.x > -0.01) //add abs
+       if(model.movement.x < 0.01 && model.movement.x > -0.01) //add abs
        {
-        playerMovementModel.movement.y = Input.GetAxisRaw("Vertical");
+        model.movement.y = Input.GetAxisRaw("Vertical");
        }
-       playerMovementView.ChangeAnimator(playerMovementModel.animator, "Horizontal", playerMovementModel.movement.x);
-       playerMovementView.ChangeAnimator(playerMovementModel.animator, "Vertical", playerMovementModel.movement.y);
-       playerMovementView.ChangeAnimator(playerMovementModel.animator, "Speed", playerMovementModel.movement.sqrMagnitude);
+       view.ChangeAnimator(model.animator, "Horizontal", model.movement.x);
+       view.ChangeAnimator(model.animator, "Vertical", model.movement.y);
+       view.ChangeAnimator(model.animator, "Speed", model.movement.sqrMagnitude);
     }
 
     void FixedUpdate()
     {
-     playerMovementModel.rb.MovePosition(playerMovementModel.rb.position + playerMovementModel.movement * playerMovementModel.MoveSpeed * Time.fixedDeltaTime);
+     model.rb.MovePosition(model.rb.position + model.movement * model.MoveSpeed * Time.fixedDeltaTime);
     }
 }
