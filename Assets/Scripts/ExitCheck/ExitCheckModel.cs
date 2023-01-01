@@ -13,6 +13,8 @@ public class ExitCheckModel : MonoBehaviour
 
   void Start()
   {
+   gameObject.AddComponent<ExitCheckController>();
+   gameObject.AddComponent<ExitCheckView>();
    openExit = false;
    nextLevel = false;
   }

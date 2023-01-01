@@ -4,35 +4,35 @@ using UnityEngine;
 
 public class ExitCheckController : MonoBehaviour
 {
-  private ExitCheckModel exitCheckModel;
-  private ExitCheckView exitCheckView;
+  private ExitCheckModel model;
+  private ExitCheckView view;
   private GameObject door;
 
   void Start()
   {
-   exitCheckModel = GameObject.FindObjectOfType<ExitCheckModel>();
-   exitCheckView = GameObject.FindObjectOfType<ExitCheckView>();
+   model = gameObject.GetComponent<ExitCheckModel>();
+   view = gameObject.GetComponent<ExitCheckView>();
    door = GameObject.FindGameObjectWithTag("Door");
   }
 
   void Update()
   {
-   if(exitCheckModel.nextLevel == true)
+   if(model.nextLevel == true)
    {
-    exitCheckView.LoadNextLevel();
+    view.LoadNextLevel();
    }
 
-   exitCheckView.ChangeSprite(door.GetComponent<SpriteRenderer>(), exitCheckModel.doorClose);
-   if(exitCheckModel.openExit)
+   view.ChangeSprite(door.GetComponent<SpriteRenderer>(), model.doorClose);
+   if(model.openExit)
    {
-	  exitCheckView.ChangeSprite(door.GetComponent<SpriteRenderer>(), exitCheckModel.doorOpen);
+	  view.ChangeSprite(door.GetComponent<SpriteRenderer>(), model.doorOpen);
    }
-   exitCheckModel.openExit = true;
-   foreach(IsEnd obj in exitCheckModel.allObjects)
+   model.openExit = true;
+   foreach(IsEnd obj in model.allObjects)
    {
     if(obj.Done() == false)
     {
-      exitCheckModel.openExit = false;
+      model.openExit = false;
       break;
     }
    }
