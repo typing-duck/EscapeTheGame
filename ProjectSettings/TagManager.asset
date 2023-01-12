@@ -21,6 +21,8 @@ TagManager:
   - LetterB
   - LetterC
   - LetterD
+  - BulbAdd1
+  - BullAdd2
   layers:
   - Default
   - TransparentFX
