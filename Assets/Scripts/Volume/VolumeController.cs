@@ -11,14 +11,13 @@ public class VolumeController : MonoBehaviour
 
   void Start()
   {
-   model = gameObject.GetComponent<VolumeModel>();
-   view = gameObject.GetComponent<VolumeView>();
+   model = GameObject.FindObjectOfType<VolumeModel>();
+   view = GameObject.FindObjectOfType<VolumeView>();
   }
 
     void Update()
     {
-       Color32 grey = model.grey;
-       view.ChangeColorFilter(model.currentColorAdjustments, model.white);
+       view.ChangeColorFilter(model.currentColorAdjustments, view.white);
        int many = 0;
        foreach(GameObject switcher in model.colorSwitchers)
        {
@@ -27,16 +26,16 @@ public class VolumeController : MonoBehaviour
             if(switcher.tag.Contains("Grey"))
               {
                many++;
-               view.ChangeColorFilter(model.currentColorAdjustments, model.grey);
+               view.ChangeColorFilter(model.currentColorAdjustments, view.grey);
               }
             if(switcher.tag.Contains("Pink"))
               {
                many++;
-               view.ChangeColorFilter(model.currentColorAdjustments, model.pink);
+               view.ChangeColorFilter(model.currentColorAdjustments, view.pink);
               }
             if(many == 2)
               {
-               view.ChangeColorFilter(model.currentColorAdjustments, model.blended);
+               view.ChangeColorFilter(model.currentColorAdjustments, view.blended);
               }
            }
        }
