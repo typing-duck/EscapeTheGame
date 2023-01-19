@@ -7,13 +7,9 @@ using UnityEngine.Rendering.Universal;
 public class BulbModel : MonoBehaviour
 {
     public GameObject switcherAdd;
-    public Sprite bulbOn;
-    public Sprite bulbOff;
 
     void Start()
     {
-      gameObject.AddComponent<BulbController>();
-      gameObject.AddComponent<BulbView>();
       GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
       foreach(GameObject obj in allObjects)
       {

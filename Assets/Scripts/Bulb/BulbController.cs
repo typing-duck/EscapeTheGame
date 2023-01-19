@@ -6,24 +6,27 @@ using UnityEngine.Rendering.Universal;
 
 public class BulbController : MonoBehaviour
 {
-  private BulbModel model;
+  private BulbModel[] models;
   private BulbView view;
 
   void Start()
   {
-   model = gameObject.GetComponent<BulbModel>();
-   view = gameObject.GetComponent<BulbView>();
+   models = GameObject.FindObjectsOfType<BulbModel>();
+   view = GameObject.FindObjectOfType<BulbView>();
   }
 
   void Update()
   {
+   foreach(BulbModel model in models)
+   {
     if(model.switcherAdd.GetComponent<SwitchModel>().isOn == true)
     {
-      view.ChangeSprite(GetComponent<SpriteRenderer>(), model.bulbOn);
+      view.SpriteBulbOn(model, true);
     }
     else
     {
-      view.ChangeSprite(GetComponent<SpriteRenderer>(), model.bulbOff);
+      view.SpriteBulbOn(model, false);
     }
+   }
   }
 }

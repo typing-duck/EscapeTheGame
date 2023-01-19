@@ -6,8 +6,18 @@ using UnityEngine.Rendering.Universal;
 
 public class BulbView : MonoBehaviour
 {
-  public void ChangeSprite(SpriteRenderer spriteRenderer, Sprite newSprite)
+  public Sprite bulbOn;
+  public Sprite bulbOff;
+
+  public void SpriteBulbOn(BulbModel model, bool state)
   {
-   spriteRenderer.sprite = newSprite;
+   if(state == true)
+   {
+    model.gameObject.GetComponent<SpriteRenderer>().sprite = bulbOn;
+   }
+   else
+   {
+    model.gameObject.GetComponent<SpriteRenderer>().sprite = bulbOff;
+   }
   }
 }
