@@ -973,7 +973,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switcherOn1: {fileID: 817462627}
   switcherOn2: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   layerToMove: 4
 --- !u!1001 &817462624
 PrefabInstance:
@@ -1643,6 +1642,7 @@ GameObject:
   - component: {fileID: 1017895491}
   - component: {fileID: 1017895490}
   - component: {fileID: 1017895492}
+  - component: {fileID: 1017895493}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -1690,6 +1690,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactKey: 101
+--- !u!114 &1017895493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017895489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ed4499cd64dbda2bb85f4e1d910429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1025630106
 GameObject:
   m_ObjectHideFlags: 0
@@ -2114,7 +2126,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switcherOn1: {fileID: 1499681114}
   switcherOn2: {fileID: 817462627}
-  spriteRenderer: {fileID: 0}
   layerToMove: 2
 --- !u!1001 &1499681111
 PrefabInstance:
@@ -2240,6 +2251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1675461674}
   - component: {fileID: 1675461673}
+  - component: {fileID: 1675461675}
   m_Layer: 0
   m_Name: View
   m_TagString: Untagged
@@ -2286,6 +2298,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1675461675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675461672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 231dc47d0caf7d69c8aa61a8f264164e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1733115591
 GameObject:
   m_ObjectHideFlags: 0
@@ -2502,7 +2526,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switcherOn1: {fileID: 1499681114}
   switcherOn2: {fileID: 817462627}
-  spriteRenderer: {fileID: 0}
   layerToMove: 2
 --- !u!1 &2091721143
 GameObject:
@@ -2603,7 +2626,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switcherOn1: {fileID: 817462627}
   switcherOn2: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   layerToMove: 4
 --- !u!1 &2106416635
 GameObject:

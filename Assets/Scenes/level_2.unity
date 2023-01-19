@@ -438,6 +438,7 @@ GameObject:
   m_Component:
   - component: {fileID: 260537555}
   - component: {fileID: 260537554}
+  - component: {fileID: 260537556}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -473,6 +474,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &260537556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260537553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44ed4499cd64dbda2bb85f4e1d910429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &317917676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1462,6 +1475,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctPosition: 0
   target: {fileID: 1041766273}
+--- !u!1 &643853899
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 643853901}
+  - component: {fileID: 643853900}
+  m_Layer: 0
+  m_Name: View
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &643853900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643853899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 231dc47d0caf7d69c8aa61a8f264164e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &643853901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 643853899}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.09974472, y: 3.1927373, z: -7.767979}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &783524803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1631,7 +1688,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   switcherOn1: {fileID: 28803344}
   switcherOn2: {fileID: 0}
-  spriteRenderer: {fileID: 0}
   layerToMove: 2
 --- !u!1001 &1190698971
 PrefabInstance:

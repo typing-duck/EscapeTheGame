@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class ShowHiddenController : MonoBehaviour
 {
-  private ShowHiddenModel model;
+  private ShowHiddenModel[] models;
   private ShowHiddenView view;
 
   void Start()
   {
-   model = gameObject.GetComponent<ShowHiddenModel>();
-   view = gameObject.GetComponent<ShowHiddenView>();
+   models = GameObject.FindObjectsOfType<ShowHiddenModel>();
+   view = GameObject.FindObjectOfType<ShowHiddenView>();
   }
 
   void Update()
   {
-    view.MoveToLayer(model.spriteRenderer, 0);
-    if(model.switcherOn1??true)
+    foreach(ShowHiddenModel model in models)
+    {
+     view.MoveToLayer(model, 0);
+     if(model.switcherOn1??true)
       {
        if(model.switcherOn1.GetComponent<SwitchModel>().isOn)
          {
@@ -24,14 +26,15 @@ public class ShowHiddenController : MonoBehaviour
             {
              if(model.switcherOn2.GetComponent<SwitchModel>().isOn)
                {
-                view.MoveToLayer(model.spriteRenderer, model.layerToMove);
+                view.MoveToLayer(model, model.layerToMove);
                }
             }
           else
             {
-             view.MoveToLayer(model.spriteRenderer, model.layerToMove);
+             view.MoveToLayer(model, model.layerToMove);
             }
          }   
       }
+    }
   }
 }
