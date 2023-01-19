@@ -7,13 +7,12 @@ public class PlayerMovementController : MonoBehaviour
 
     void Start()
     {
-     model = gameObject.GetComponent<PlayerMovementModel>();
-     view = gameObject.GetComponent<PlayerMovementView>();
+     model = GameObject.FindObjectOfType<PlayerMovementModel>();
+     view = GameObject.FindObjectOfType<PlayerMovementView>();
     }
 
     void Update()
     {
-      
       foreach(GameObject switcher in model.blackoutSwitchers)
        {
         if(switcher.GetComponent<SwitchModel>().isOn == true)
@@ -36,6 +35,13 @@ public class PlayerMovementController : MonoBehaviour
 
     void FixedUpdate()
     {
+     foreach(GameObject switcher in model.blackoutSwitchers)
+       {
+        if(switcher.GetComponent<SwitchModel>().isOn == true)
+        {
+          return;
+        }
+       }
      model.rb.MovePosition(model.rb.position + model.movement * model.MoveSpeed * Time.fixedDeltaTime);
     }
 }
