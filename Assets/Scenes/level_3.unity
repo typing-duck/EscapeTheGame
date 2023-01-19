@@ -1238,6 +1238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctPosition: 0
   target: {fileID: 1487718064}
+  triggerCollision: {fileID: 0}
 --- !u!4 &856974848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5439524902359009928, guid: 41014cd8e8ef150f3bb16015da608dd3, type: 3}
@@ -1643,6 +1644,7 @@ GameObject:
   - component: {fileID: 1017895490}
   - component: {fileID: 1017895492}
   - component: {fileID: 1017895493}
+  - component: {fileID: 1017895494}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -1700,6 +1702,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44ed4499cd64dbda2bb85f4e1d910429, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1017895494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017895489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 957a1edb73489b064ada7ad915941815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1025630106
@@ -2000,6 +2014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   correctPosition: 0
   target: {fileID: 1956224348}
+  triggerCollision: {fileID: 0}
 --- !u!1 &1487718064
 GameObject:
   m_ObjectHideFlags: 0

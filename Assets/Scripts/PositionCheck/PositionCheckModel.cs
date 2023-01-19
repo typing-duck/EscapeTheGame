@@ -5,12 +5,17 @@ using UnityEngine;
 public class PositionCheckModel : MonoBehaviour
 {
     [HideInInspector] 
-    public bool correctPosition;
+    public bool correctPosition = false;
     public GameObject target;
+    public Collider2D triggerCollision = null;
 
-    void Start()
+   private void OnTriggerEnter2D(Collider2D collision)
     {
-      correctPosition = false;
-      gameObject.AddComponent<PositionCheckController>();
+     triggerCollision = collision;
+    }
+
+   private void OnTriggerExit2D(Collider2D collision)
+    {
+     triggerCollision = collision;
     }
 }
