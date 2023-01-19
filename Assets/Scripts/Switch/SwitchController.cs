@@ -4,53 +4,61 @@ using UnityEngine;
 
 public class SwitchController : IsEnd
 {
-  private SwitchModel model;
+  private SwitchModel[] models;
+  public KeyCode interactKey = KeyCode.E; 
 
   void Start()
   {
-   model = gameObject.GetComponent<SwitchModel>();
+   models = GameObject.FindObjectsOfType<SwitchModel>();
   }
+
   override public bool Done()
     {
-     if(model.isPositionImportant == true && model.isOn != model.shouldBeOn)
-        {
-         return false;
-        }
+     foreach(SwitchModel model in models)
+     {
+      if(model.isPositionImportant == true && model.isOn != model.shouldBeOn)
+      {
+        return false;
+      }
+     }
      return true;
     }
 
   void Update()
     {
-        if(model.isInRange)
+      foreach(SwitchModel model in models)
+      {
+        if(model.isInRange && Input.GetKeyDown(interactKey))
         {
-          if(Input.GetKeyDown(model.interactKey))
-	          {
-	           Switch();
-	          }
+	        Switch(model);   
         }
+        if(model.triggerCollision)
+        {
+          HandleCollision(model);
+        }
+      }
     }
   
-  public void Switch()
+  public void Switch(SwitchModel model)
    {
      model.isOn = !model.isOn;
      Debug.Log("Change");
    }
 
-  private void OnTriggerEnter2D(Collider2D collision)
-    {
-      if(collision.gameObject.CompareTag("Player"))
+  public void HandleCollision(SwitchModel model)
+  {
+    if(model.triggerCollision.gameObject.CompareTag("Player"))
       {
-        model.isInRange = true;
-	      Debug.Log("Player is in range");
+        model.isInRange = !model.isInRange;
+        if(model.isInRange == true)
+        {
+         Debug.Log("Player is in range");
+        }
+        else
+        {
+          Debug.Log("Player isn't in range");
+        }
       }
-    }
-
-  private void OnTriggerExit2D(Collider2D collision)
-    {
-      if(collision.gameObject.CompareTag("Player"))
-      {
-        model.isInRange = false;
-	      Debug.Log("Player is not in range");
-      }
-    }
+    model.triggerCollision = null;
+  }
 }

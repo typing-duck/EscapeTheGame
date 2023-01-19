@@ -7,12 +7,17 @@ public class SwitchModel : MonoBehaviour
    public bool isOn = false;
    public bool isPositionImportant = false;
    public bool shouldBeOn = true;
+   public bool isInRange = false;
 
-   public bool isInRange;
-   public KeyCode interactKey = KeyCode.E; 
+   public Collider2D triggerCollision = null;
 
-   void Start()
+   private void OnTriggerEnter2D(Collider2D collision)
     {
-      gameObject.AddComponent<SwitchController>();
+     triggerCollision = collision;
+    }
+
+   private void OnTriggerExit2D(Collider2D collision)
+    {
+     triggerCollision = collision;
     }
 }
