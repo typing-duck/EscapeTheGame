@@ -3950,8 +3950,8 @@ GameObject:
   - component: {fileID: 1451726534}
   - component: {fileID: 1451726533}
   m_Layer: 0
-  m_Name: bulb (1)
-  m_TagString: BullAdd2
+  m_Name: bulb_add2
+  m_TagString: BulbAdd2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4189,7 +4189,7 @@ GameObject:
   - component: {fileID: 1547707403}
   - component: {fileID: 1547707404}
   m_Layer: 0
-  m_Name: bulb
+  m_Name: bulb_add1
   m_TagString: BulbAdd1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
