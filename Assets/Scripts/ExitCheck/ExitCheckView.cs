@@ -5,9 +5,25 @@ using UnityEngine.SceneManagement;
 
 public class ExitCheckView : MonoBehaviour
 {
-  public void ChangeSprite(SpriteRenderer spriteRenderer, Sprite newSprite)
+  private GameObject door;
+  public Sprite doorOpen;
+  public Sprite doorClose;
+
+  void Start()
   {
-   spriteRenderer.sprite = newSprite;
+    door = GameObject.FindGameObjectWithTag("Door");
+  }
+
+  public void SpriteDoorOpen(bool state)
+  {
+    if(state == true)
+    {
+     door.GetComponent<SpriteRenderer>().sprite = doorOpen;
+    }
+    else
+    {
+      door.GetComponent<SpriteRenderer>().sprite = doorClose;
+    }
   }
 
   public void LoadNextLevel()

@@ -1646,6 +1646,7 @@ GameObject:
   - component: {fileID: 1017895493}
   - component: {fileID: 1017895494}
   - component: {fileID: 1017895495}
+  - component: {fileID: 1017895496}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -1729,6 +1730,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3313b3c9b92c13f6a94f71fef227f767, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1017895496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017895489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f86b7db4a05a7e798b205a0cd484326, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  allObjects: []
 --- !u!1 &1025630106
 GameObject:
   m_ObjectHideFlags: 0
@@ -2281,6 +2295,7 @@ GameObject:
   - component: {fileID: 1675461673}
   - component: {fileID: 1675461675}
   - component: {fileID: 1675461676}
+  - component: {fileID: 1675461677}
   m_Layer: 0
   m_Name: View
   m_TagString: Untagged
@@ -2351,6 +2366,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086fd5f9d86c194babb4bda8d919de50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1675461677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675461672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad714139afda175dfab64f31fedf650b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorOpen: {fileID: 21300000, guid: 174e9d387613f2ebb8c54889d1988701, type: 3}
+  doorClose: {fileID: 21300000, guid: 639b01b45a346310cb111be1bbc9b6bb, type: 3}
 --- !u!1 &1733115591
 GameObject:
   m_ObjectHideFlags: 0
