@@ -19,13 +19,13 @@ public class BulbController : MonoBehaviour
   {
    foreach(BulbModel model in models)
    {
-    if(model.switcherAdd.GetComponent<SwitchModel>().isOn == true)
-    {
-      view.SpriteBulbOn(model, true);
-    }
-    else
+    if(model.switcherAdd != null)
     {
       view.SpriteBulbOn(model, false);
+      if(model.switcherAdd.GetComponent<SwitchModel>().isOn == true)
+      {
+        view.SpriteBulbOn(model, true);
+      }
     }
    }
   }

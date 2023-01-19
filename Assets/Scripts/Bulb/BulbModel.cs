@@ -8,18 +8,18 @@ public class BulbModel : MonoBehaviour
 {
     public GameObject switcherAdd;
 
-    void Start()
+    void Update()
     {
-      GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
-      foreach(GameObject obj in allObjects)
+      SwitchModel[] allSwitches = GameObject.FindObjectsOfType<SwitchModel>();
+      foreach(SwitchModel switcher in allSwitches)
       {
-        if(obj.tag.Contains("Add1") && tag.Contains("Add1"))
+        if(switcher.gameObject.tag.Contains("Add1") && tag.Contains("Add1"))
         {
-          switcherAdd = obj;
+          switcherAdd = switcher.gameObject;
         }
-        else if(obj.tag.Contains("Add2") && tag.Contains("Add2"))
+        else if(switcher.gameObject.tag.Contains("Add2") && tag.Contains("Add2"))
         {
-            switcherAdd = obj;
+          switcherAdd = switcher.gameObject;
         }
       }
     }
