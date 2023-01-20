@@ -3,6 +3,8 @@
 ## AMVCC (toptal.com)
 
 GameObject Model zawiera wszystkie skrypty Model.\
+Musi zawierać dane dla wszystkich obiektów (np. obecny stan każdego przycisku).
+
 GameObject View zawiera wszystkie skrypty View.\
 GameObject Controller zawiera wszystkie skrypty Controller.
 
