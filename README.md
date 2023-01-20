@@ -32,3 +32,4 @@ Skrypt Controller znajduje wszystkie obiekty z komponentem Model i obsługuje je
 Gdy istniał jeden skrypt Model musiał zawierać dane wszystkich obiektów.\
 Dodanie nowego obiektu byłoby bardziej skomplikowane, ponieważ trzeba by było edytować skrypt i/lub dodawać identyfikatory.\
 W obecnej wersji wystarczy przeciągnąć do gry odpowiedni prefab.
+4) Model MVC ciągle istnieje - jest podział na Model, View i Controller. Dodanie wielu skryptów Model zamiast jednego nic nie psuje.
