@@ -646,6 +646,7 @@ GameObject:
   - component: {fileID: 383767041}
   - component: {fileID: 383767040}
   - component: {fileID: 383767042}
+  - component: {fileID: 383767043}
   m_Layer: 0
   m_Name: red_button
   m_TagString: Button1
@@ -746,6 +747,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14993048, y: 0.65303326}
   m_EdgeRadius: 0
+--- !u!114 &383767043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383767039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  isInRange: 0
+  triggerCollision: {fileID: 0}
 --- !u!1 &417129949
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,6 +1109,7 @@ GameObject:
   - component: {fileID: 548706122}
   - component: {fileID: 548706124}
   - component: {fileID: 548706123}
+  - component: {fileID: 548706125}
   m_Layer: 0
   m_Name: red_button (4)
   m_TagString: Button5
@@ -1193,6 +1210,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &548706125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548706121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  isInRange: 0
+  triggerCollision: {fileID: 0}
 --- !u!1 &549395731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2581,6 +2613,7 @@ GameObject:
   - component: {fileID: 847614339}
   - component: {fileID: 847614341}
   - component: {fileID: 847614340}
+  - component: {fileID: 847614342}
   m_Layer: 0
   m_Name: red_button (1)
   m_TagString: Button2
@@ -2681,6 +2714,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &847614342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847614338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  isInRange: 0
+  triggerCollision: {fileID: 0}
 --- !u!1 &869918579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,6 +2824,7 @@ GameObject:
   - component: {fileID: 991368467}
   - component: {fileID: 991368469}
   - component: {fileID: 991368468}
+  - component: {fileID: 991368470}
   m_Layer: 0
   m_Name: red_button (3)
   m_TagString: Button4
@@ -2876,6 +2925,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &991368470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991368466}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  isInRange: 0
+  triggerCollision: {fileID: 0}
 --- !u!1 &999655101
 GameObject:
   m_ObjectHideFlags: 0
@@ -3877,7 +3941,7 @@ GameObject:
   - component: {fileID: 1433241651}
   - component: {fileID: 1433241652}
   m_Layer: 0
-  m_Name: View
+  m_Name: Views
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4880,8 +4944,9 @@ GameObject:
   - component: {fileID: 1604960089}
   - component: {fileID: 1604960090}
   - component: {fileID: 1604960091}
+  - component: {fileID: 1604960092}
   m_Layer: 0
-  m_Name: Controller
+  m_Name: Controllers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4952,6 +5017,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f45b04104658a299b92a888b4308c2b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1604960092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604960086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c200903cc0c5fc98aff5b95687729a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactKey: 101
 --- !u!1 &1759912386
 GameObject:
   m_ObjectHideFlags: 0
@@ -5333,6 +5411,7 @@ GameObject:
   - component: {fileID: 1906755645}
   - component: {fileID: 1906755647}
   - component: {fileID: 1906755646}
+  - component: {fileID: 1906755648}
   m_Layer: 0
   m_Name: red_button (6)
   m_TagString: Button7
@@ -5433,6 +5512,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1906755648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906755644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  isInRange: 0
+  triggerCollision: {fileID: 0}
 --- !u!1 &2054757908
 GameObject:
   m_ObjectHideFlags: 0
@@ -5477,6 +5571,7 @@ GameObject:
   - component: {fileID: 2084035941}
   - component: {fileID: 2084035943}
   - component: {fileID: 2084035942}
+  - component: {fileID: 2084035944}
   m_Layer: 0
   m_Name: red_button (2)
   m_TagString: Button3
@@ -5577,6 +5672,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2084035944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2084035940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  isInRange: 0
+  triggerCollision: {fileID: 0}
 --- !u!1 &2093373263
 GameObject:
   m_ObjectHideFlags: 0
@@ -5588,6 +5698,7 @@ GameObject:
   - component: {fileID: 2093373264}
   - component: {fileID: 2093373266}
   - component: {fileID: 2093373265}
+  - component: {fileID: 2093373267}
   m_Layer: 0
   m_Name: red_button (5)
   m_TagString: Button6
@@ -5688,3 +5799,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2093373267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093373263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isOn: 0
+  isInRange: 0
+  triggerCollision: {fileID: 0}
