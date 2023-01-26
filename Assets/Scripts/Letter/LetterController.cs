@@ -1,11 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class LetterController : IsEnd
 {
-  private GameObject[] letters;
-  private char[] password = {'t','i','m','e'}; 
+  private GameObject[] letters = new GameObject[26];
+  public Tuple<char, bool>[] password = 
+  {
+    Tuple.Create('t', false),
+    Tuple.Create('i', false),
+    Tuple.Create('m', false),
+    Tuple.Create('e', false)
+  }; 
 
   void Start()
   {
@@ -39,6 +46,13 @@ public class LetterController : IsEnd
 
   override public bool Done()
   {
-     return false;
+     foreach(var letter in password)
+     {
+      if(letter.Item2 == false)
+      {
+        return false;
+      }
+     }
+     return true;
   }
 }
