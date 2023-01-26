@@ -23,6 +23,13 @@ TagManager:
   - LetterD
   - BulbAdd1
   - BulbAdd2
+  - Button_a
+  - Button_e
+  - Button_i
+  - Button_m
+  - Button_q
+  - Button_u
+  - Button_y
   layers:
   - Default
   - TransparentFX

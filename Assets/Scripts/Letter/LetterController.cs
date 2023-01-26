@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class LetterController : IsEnd
 {
+  private GameObject[] switchers = new GameObject[2];
+  private GameObject[] buttons = new GameObject[7];
   private GameObject[] letters = new GameObject[26];
   public Tuple<char, bool>[] password = 
   {
@@ -15,6 +17,24 @@ public class LetterController : IsEnd
   }; 
 
   void Start()
+  {
+    init_buttons();
+    init_letters();
+    init_swithers();
+  }
+
+  private void init_buttons()
+  {
+    buttons[0] = GameObject.FindGameObjectWithTag("Button_a");
+    buttons[1] = GameObject.FindGameObjectWithTag("Button_e");
+    buttons[2] = GameObject.FindGameObjectWithTag("Button_i");
+    buttons[3] = GameObject.FindGameObjectWithTag("Button_m");
+    buttons[4] = GameObject.FindGameObjectWithTag("Button_q");
+    buttons[5] = GameObject.FindGameObjectWithTag("Button_u");
+    buttons[6] = GameObject.FindGameObjectWithTag("Button_y");
+  }
+
+  private void init_letters()
   {
     letters[0] = GameObject.Find("letter_a");
     letters[1] = GameObject.Find("letter_b");
@@ -42,6 +62,12 @@ public class LetterController : IsEnd
     letters[23] = GameObject.Find("letter_x");
     letters[24] = GameObject.Find("letter_y");
     letters[25] = GameObject.Find("letter_z");
+  }
+
+  private void init_swithers()
+  {
+    switchers[0] = GameObject.FindGameObjectWithTag("Add1");
+    switchers[1] = GameObject.FindGameObjectWithTag("Add2");
   }
 
   override public bool Done()
