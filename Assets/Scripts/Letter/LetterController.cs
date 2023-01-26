@@ -6,7 +6,7 @@ using UnityEngine;
 public class LetterController : IsEnd
 {
   private GameObject[] switchers = new GameObject[2];
-  private GameObject[] buttons = new GameObject[7];
+  private GameObject[] buttons = new GameObject[26];
   private GameObject[] letters = new GameObject[26];
   public Tuple<char, bool>[] password = 
   {
@@ -23,15 +23,35 @@ public class LetterController : IsEnd
     init_swithers();
   }
 
+  void Update()
+  {
+    int add = 0;
+    if(switchers[0].GetComponent<SwitchModel>().isOn)
+    {
+      add = add + 1;
+    }
+    if(switchers[1].GetComponent<SwitchModel>().isOn)
+    {
+      add = add + 2;
+    }
+    for(int i=0; i<25; i=i+4)
+    {
+      if(buttons[i].GetComponent<ButtonModel>().isOn)
+      {
+        Debug.Log(letters[i+add].name);
+      }
+    }
+  }
+
   private void init_buttons()
   {
     buttons[0] = GameObject.FindGameObjectWithTag("Button_a");
-    buttons[1] = GameObject.FindGameObjectWithTag("Button_e");
-    buttons[2] = GameObject.FindGameObjectWithTag("Button_i");
-    buttons[3] = GameObject.FindGameObjectWithTag("Button_m");
-    buttons[4] = GameObject.FindGameObjectWithTag("Button_q");
-    buttons[5] = GameObject.FindGameObjectWithTag("Button_u");
-    buttons[6] = GameObject.FindGameObjectWithTag("Button_y");
+    buttons[4] = GameObject.FindGameObjectWithTag("Button_e");
+    buttons[8] = GameObject.FindGameObjectWithTag("Button_i");
+    buttons[12] = GameObject.FindGameObjectWithTag("Button_m");
+    buttons[16] = GameObject.FindGameObjectWithTag("Button_q");
+    buttons[20] = GameObject.FindGameObjectWithTag("Button_u");
+    buttons[24] = GameObject.FindGameObjectWithTag("Button_y");
   }
 
   private void init_letters()
