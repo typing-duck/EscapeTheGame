@@ -5,9 +5,21 @@ using UnityEngine;
 
 public class LetterController : IsEnd
 {
+  public Color32 yellow = new Color32(255,190,0,255);
+  public Color32 white = new Color32(255,255,255,255);
+
   private GameObject[] switchers = new GameObject[2];
   private GameObject[] buttons = new GameObject[26];
   private GameObject[] letters = new GameObject[26];
+
+  class Element
+  {
+    public int letter_number;
+    public Element next;
+  }
+
+  private Element head;
+  private Element current;
   public Tuple<char, bool>[] password = 
   {
     Tuple.Create('t', false),
@@ -18,6 +30,7 @@ public class LetterController : IsEnd
 
   void Start()
   {
+    init_password();
     init_buttons();
     init_letters();
     init_swithers();
@@ -34,13 +47,35 @@ public class LetterController : IsEnd
     {
       add = add + 2;
     }
+    for(int i=0; i<26; i=i+1)
+    {
+      letters[i].GetComponent<SpriteRenderer>().color = white;
+    }
     for(int i=0; i<25; i=i+4)
     {
-      if(buttons[i].GetComponent<ButtonModel>().isOn)
+      if(buttons[i].GetComponent<ButtonModel>().isOn && (i+add < 26))
       {
+        if(i+add == current.letter_number)
+        {
+          current = current.next;
+        }
         Debug.Log(letters[i+add].name);
+        letters[i+add].GetComponent<SpriteRenderer>().color = yellow;
       }
     }
+  }
+  private void init_password()
+  {
+    head = new Element();
+    head.letter_number = 0;
+    Element next = new Element();
+    head.next = next;
+    next.letter_number = 1;
+    next.next = new Element();
+    next = next.next;
+    next.letter_number = 100;
+    next.next = null;
+    current = head;
   }
 
   private void init_buttons()
@@ -92,13 +127,10 @@ public class LetterController : IsEnd
 
   override public bool Done()
   {
-     foreach(var letter in password)
-     {
-      if(letter.Item2 == false)
-      {
-        return false;
-      }
-     }
-     return true;
+    if(current.letter_number == 100)
+    {
+      return true;
+    }
+    return false;
   }
 }
