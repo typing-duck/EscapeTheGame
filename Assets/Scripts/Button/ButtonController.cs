@@ -31,7 +31,7 @@ public class ButtonController : MonoBehaviour
    {
      model.isOn = true;
      Debug.Log("Button on.");
-     yield return new WaitForSecondsRealtime(2);
+     yield return new WaitForSecondsRealtime(0.5f);
      model.isOn = false;
      Debug.Log("Button off.");
    }

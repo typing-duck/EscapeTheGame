@@ -17,16 +17,8 @@ public class LetterController : IsEnd
     public int letter_number;
     public Element next;
   }
-
   private Element head;
   private Element current;
-  public Tuple<char, bool>[] password = 
-  {
-    Tuple.Create('t', false),
-    Tuple.Create('i', false),
-    Tuple.Create('m', false),
-    Tuple.Create('e', false)
-  }; 
 
   void Start()
   {
@@ -51,7 +43,7 @@ public class LetterController : IsEnd
     {
       letters[i].GetComponent<SpriteRenderer>().color = white;
     }
-    for(int i=0; i<25; i=i+4)
+    for(int i=0; i<26; i=i+4)
     {
       if(buttons[i].GetComponent<ButtonModel>().isOn && (i+add < 26))
       {
@@ -67,15 +59,27 @@ public class LetterController : IsEnd
   private void init_password()
   {
     head = new Element();
-    head.letter_number = 0;
-    Element next = new Element();
-    head.next = next;
-    next.letter_number = 1;
-    next.next = new Element();
-    next = next.next;
-    next.letter_number = 100;
-    next.next = null;
     current = head;
+
+    Element element = head;
+    element.letter_number = 19; // t
+    element.next = new Element();
+    element = element.next;
+
+    element.letter_number = 8; // i
+    element.next = new Element();
+    element = element.next;
+
+    element.letter_number = 12; // m
+    element.next = new Element();
+    element = element.next;
+
+    element.letter_number = 4; // e
+    element.next = new Element();
+    element = element.next;
+
+    element.letter_number = -1; //end
+    element.next = null;
   }
 
   private void init_buttons()
@@ -127,7 +131,7 @@ public class LetterController : IsEnd
 
   override public bool Done()
   {
-    if(current.letter_number == 100)
+    if(current.letter_number == -1)
     {
       return true;
     }
