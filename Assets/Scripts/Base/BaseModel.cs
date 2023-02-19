@@ -6,5 +6,15 @@ using UnityEngine.Rendering.Universal;
 
 public class BaseModel : MonoBehaviour
 {
+  public Collider2D triggerCollision = null;
 
+  private void OnTriggerEnter2D(Collider2D collision)
+  {
+    triggerCollision = collision;
+  }
+
+  private void OnTriggerExit2D(Collider2D collision)
+  {
+    triggerCollision = collision;
+  }
 }
