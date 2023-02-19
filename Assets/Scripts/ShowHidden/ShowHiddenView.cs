@@ -9,5 +9,4 @@ public class ShowHiddenView : MonoBehaviour
         SpriteRenderer spriteRenderer = model.gameObject.GetComponent<SpriteRenderer>();
         spriteRenderer.sortingOrder = layer;
     }
-
 }

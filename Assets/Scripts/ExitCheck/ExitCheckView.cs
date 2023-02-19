@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ExitCheckView : MonoBehaviour
+public class ExitCheckView : BaseView
 {
   private GameObject door;
   public Sprite doorOpen;
@@ -18,11 +18,11 @@ public class ExitCheckView : MonoBehaviour
   {
     if(state == true)
     {
-     door.GetComponent<SpriteRenderer>().sprite = doorOpen;
+     ChangeSprite(door, doorOpen);
     }
     else
     {
-      door.GetComponent<SpriteRenderer>().sprite = doorClose;
+     ChangeSprite(door, doorClose);
     }
   }
 

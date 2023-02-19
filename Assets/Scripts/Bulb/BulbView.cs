@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-public class BulbView : MonoBehaviour
+public class BulbView : BaseView
 {
   public Sprite bulbOn;
   public Sprite bulbOff;
@@ -13,11 +13,11 @@ public class BulbView : MonoBehaviour
   {
    if(state == true)
    {
-    model.gameObject.GetComponent<SpriteRenderer>().sprite = bulbOn;
+    ChangeSprite(model, bulbOn);
    }
    else
    {
-    model.gameObject.GetComponent<SpriteRenderer>().sprite = bulbOff;
+    ChangeSprite(model, bulbOff);
    }
   }
 }
