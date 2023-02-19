@@ -6,8 +6,8 @@ using UnityEngine.Rendering.Universal;
 
 public class BaseView : MonoBehaviour
 {
-  private void ChangeSprite(GameObject object, Sprite new_sprite)
+  protected void ChangeSprite(GameObject obj, Sprite newSprite)
   {
-    object.GetComponent<SpriteRenderer>().sprite = new_sprite;
+    obj.GetComponent<SpriteRenderer>().sprite = newSprite;
   }
 }

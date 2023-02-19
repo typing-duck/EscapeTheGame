@@ -13,11 +13,11 @@ public class BulbView : BaseView
   {
    if(state == true)
    {
-    ChangeSprite(model, bulbOn);
+    ChangeSprite(model.gameObject, bulbOn);
    }
    else
    {
-    ChangeSprite(model, bulbOff);
+    ChangeSprite(model.gameObject, bulbOff);
    }
   }
 }
