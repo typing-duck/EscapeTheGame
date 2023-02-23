@@ -6,13 +6,15 @@ public class ExitCheckController : MonoBehaviour
 {
   private ExitCheckModel model;
   private ExitCheckView view;
-  public IsEnd[] allObjects;
+  private GameObject door;
+  public IsEnd[] allEndObjects;
 
   void Start()
   {
    model = GameObject.FindObjectOfType<ExitCheckModel>();
    view = GameObject.FindObjectOfType<ExitCheckView>();
-   allObjects = GameObject.FindObjectsOfType<IsEnd>();
+   door = GameObject.FindGameObjectWithTag("Door");
+   allEndObjects = GameObject.FindObjectsOfType<IsEnd>();
   }
 
   void Update()
@@ -26,13 +28,17 @@ public class ExitCheckController : MonoBehaviour
     view.LoadNextLevel();
    }
 
-   view.SpriteDoorOpen(false);
    if(model.openExit)
    {
-	  view.SpriteDoorOpen(true);
+    view.ChangeSprite(door, view.doorOpen);
    }
+   else
+   {
+    view.ChangeSprite(door, view.doorClose);
+   }
+
    model.openExit = true;
-   foreach(IsEnd obj in allObjects)
+   foreach(IsEnd obj in allEndObjects)
    {
     if(obj.Done() == false)
     {

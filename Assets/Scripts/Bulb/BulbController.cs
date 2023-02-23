@@ -21,10 +21,13 @@ public class BulbController : MonoBehaviour
    {
     if(model.switcherAdd != null)
     {
-      view.SpriteBulbOn(model, false);
       if(model.switcherAdd.GetComponent<SwitchModel>().isOn == true)
       {
-        view.SpriteBulbOn(model, true);
+        view.ChangeSprite(model.gameObject, view.bulbOn);
+      }
+      else
+      {
+        view.ChangeSprite(model.gameObject, view.bulbOff);
       }
     }
    }

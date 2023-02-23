@@ -7,10 +7,13 @@ public class LetterController : IsEnd
 {
   public Color32 yellow = new Color32(255,190,0,255);
   public Color32 white = new Color32(255,255,255,255);
+  public Color32 black = new Color32(0,0,0,255);
 
   private GameObject[] switchers = new GameObject[2];
   private GameObject[] buttons = new GameObject[26];
   private GameObject[] letters = new GameObject[26];
+  private GameObject[] password_letters = new GameObject[4];
+  private int current_letter = 0;
 
   class Element
   {
@@ -22,7 +25,8 @@ public class LetterController : IsEnd
 
   void Start()
   {
-    init_password();
+    init_password_letters();
+    init_password_array();
     init_buttons();
     init_letters();
     init_swithers();
@@ -49,6 +53,8 @@ public class LetterController : IsEnd
       {
         if(i+add == current.letter_number)
         {
+          password_letters[current_letter].GetComponent<SpriteRenderer>().color = black;
+          current_letter = current_letter + 1;
           current = current.next;
         }
         Debug.Log(letters[i+add].name);
@@ -56,7 +62,16 @@ public class LetterController : IsEnd
       }
     }
   }
-  private void init_password()
+
+  private void init_password_letters()
+  {
+    password_letters[0] = GameObject.Find("T");
+    password_letters[1] = GameObject.Find("I");
+    password_letters[2] = GameObject.Find("M");
+    password_letters[3] = GameObject.Find("E");
+  }
+
+  private void init_password_array()
   {
     head = new Element();
     current = head;

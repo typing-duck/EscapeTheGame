@@ -219,7 +219,7 @@ GameObject:
   - component: {fileID: 230184487}
   m_Layer: 0
   m_Name: letter_d
-  m_TagString: LetterD
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -683,11 +683,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c74c6650a9e32bc837ed57d50cb3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCollision: {fileID: 0}
   isOn: 0
   isPositionImportant: 0
   shouldBeOn: 1
   isInRange: 0
-  triggerCollision: {fileID: 0}
 --- !u!61 &375571834
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -843,9 +843,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCollision: {fileID: 0}
   isOn: 0
   isInRange: 0
-  triggerCollision: {fileID: 0}
 --- !u!1 &417129949
 GameObject:
   m_ObjectHideFlags: 0
@@ -942,7 +942,7 @@ GameObject:
   - component: {fileID: 457757135}
   m_Layer: 0
   m_Name: letter_b
-  m_TagString: LetterB
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1390,9 +1390,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCollision: {fileID: 0}
   isOn: 0
   isInRange: 0
-  triggerCollision: {fileID: 0}
 --- !u!1 &549395731
 GameObject:
   m_ObjectHideFlags: 0
@@ -2894,9 +2894,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCollision: {fileID: 0}
   isOn: 0
   isInRange: 0
-  triggerCollision: {fileID: 0}
 --- !u!1 &869918579
 GameObject:
   m_ObjectHideFlags: 0
@@ -2909,7 +2909,7 @@ GameObject:
   - component: {fileID: 869918581}
   m_Layer: 0
   m_Name: letter_a
-  m_TagString: LetterA
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3105,9 +3105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCollision: {fileID: 0}
   isOn: 0
   isInRange: 0
-  triggerCollision: {fileID: 0}
 --- !u!1 &999655101
 GameObject:
   m_ObjectHideFlags: 0
@@ -4026,7 +4026,7 @@ GameObject:
   - component: {fileID: 1418305123}
   m_Layer: 0
   m_Name: letter_c
-  m_TagString: LetterC
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5376,7 +5376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f86b7db4a05a7e798b205a0cd484326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allObjects: []
+  allEndObjects: []
 --- !u!114 &1604960091
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5670,11 +5670,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55c74c6650a9e32bc837ed57d50cb3d5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCollision: {fileID: 0}
   isOn: 0
   isPositionImportant: 0
   shouldBeOn: 1
   isInRange: 0
-  triggerCollision: {fileID: 0}
 --- !u!61 &1782354963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5914,9 +5914,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCollision: {fileID: 0}
   isOn: 0
   isInRange: 0
-  triggerCollision: {fileID: 0}
 --- !u!1 &2054757908
 GameObject:
   m_ObjectHideFlags: 0
@@ -6074,9 +6074,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCollision: {fileID: 0}
   isOn: 0
   isInRange: 0
-  triggerCollision: {fileID: 0}
 --- !u!1 &2093373263
 GameObject:
   m_ObjectHideFlags: 0
@@ -6201,6 +6201,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 612f4aabe26b56885b05bde7f263c67e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  triggerCollision: {fileID: 0}
   isOn: 0
   isInRange: 0
-  triggerCollision: {fileID: 0}

@@ -16,13 +16,13 @@ public class ButtonController : MonoBehaviour
     {
       foreach(ButtonModel model in models)
       {
-        if(model.isInRange && Input.GetKeyDown(interactKey))
-        {
-	        StartCoroutine(Press(model));   
-        }
         if(model.triggerCollision)
         {
           HandleCollision(model);
+        }
+        if(model.isInRange && Input.GetKeyDown(interactKey))
+        {
+	        StartCoroutine(Press(model));   
         }
       }
     }
