@@ -12,10 +12,11 @@ public class LetterController : IsEnd
   private GameObject[] letters = new GameObject[26];
   private GameObject[] password_letters = new GameObject[4];
   private int current_letter = 0;
+  private int offset = 97;
 
   class Element
   {
-    public int letter_number;
+    public int value;
     public Element next;
   }
   private Element head;
@@ -43,7 +44,7 @@ public class LetterController : IsEnd
     {
       if(buttons[i].GetComponent<ButtonModel>().isOn && (i+add < 26))
       {
-        if(i+add == current.letter_number)
+        if(i+add == current.value)
         {
           view.ChangeSpriteColor(password_letters[current_letter], view.black);
           current_letter = current_letter + 1;
@@ -82,30 +83,29 @@ public class LetterController : IsEnd
     current = head;
 
     Element element = head;
-    element.letter_number = 19; // t
+    element.value = (int)('t') - offset;
     element.next = new Element();
     element = element.next;
 
-    element.letter_number = 8; // i
+    element.value = (int)('i') - offset;
     element.next = new Element();
     element = element.next;
 
-    element.letter_number = 12; // m
+    element.value = (int)('m') - offset;
     element.next = new Element();
     element = element.next;
 
-    element.letter_number = 4; // e
+    element.value = (int)('e') - offset;
     element.next = new Element();
     element = element.next;
 
-    element.letter_number = -1; //end
+    element.value = -1; //end
     element.next = null;
   }
 
   private void init_buttons()
   {
     string Button_ = "Button_";
-    int offset = 97;
     for(int i=0; i<25; i=i+4)
     {
       buttons[i] = GameObject.FindGameObjectWithTag(Button_ + (char)(offset + i));
@@ -115,7 +115,6 @@ public class LetterController : IsEnd
   private void init_letters()
   {
     string letter_ = "letter_";
-    int offset = 97;
     for(int i=0; i<26; i++)
     {
      letters[i] = GameObject.Find(letter_ + (char)(offset + i));
@@ -130,7 +129,7 @@ public class LetterController : IsEnd
 
   override public bool Done()
   {
-    if(current.letter_number == -1)
+    if(current.value == -1)
     {
       return true;
     }
