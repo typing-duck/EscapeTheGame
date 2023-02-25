@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class LetterController : IsEnd
 {
-  public Color32 yellow = new Color32(255,190,0,255);
-  public Color32 white = new Color32(255,255,255,255);
-  public Color32 black = new Color32(0,0,0,255);
+  private LetterView view;
 
   private GameObject[] switchers = new GameObject[2];
   private GameObject[] buttons = new GameObject[26];
@@ -25,6 +23,8 @@ public class LetterController : IsEnd
 
   void Start()
   {
+    view = GameObject.FindObjectOfType<LetterView>();
+
     init_password_letters();
     init_password_array();
     init_buttons();
@@ -45,7 +45,7 @@ public class LetterController : IsEnd
     }
     for(int i=0; i<26; i=i+1)
     {
-      letters[i].GetComponent<SpriteRenderer>().color = white;
+      view.ChangeSpriteColor(letters[i], view.white);
     }
     for(int i=0; i<26; i=i+4)
     {
@@ -53,12 +53,12 @@ public class LetterController : IsEnd
       {
         if(i+add == current.letter_number)
         {
-          password_letters[current_letter].GetComponent<SpriteRenderer>().color = black;
+          view.ChangeSpriteColor(password_letters[current_letter], view.black);
           current_letter = current_letter + 1;
           current = current.next;
         }
         Debug.Log(letters[i+add].name);
-        letters[i+add].GetComponent<SpriteRenderer>().color = yellow;
+        view.ChangeSpriteColor(letters[i+add], view.yellow);
       }
     }
   }
