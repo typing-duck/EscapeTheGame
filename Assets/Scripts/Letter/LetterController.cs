@@ -34,15 +34,7 @@ public class LetterController : IsEnd
 
   void Update()
   {
-    int add = 0;
-    if(switchers[0].GetComponent<SwitchModel>().isOn)
-    {
-      add = add + 1;
-    }
-    if(switchers[1].GetComponent<SwitchModel>().isOn)
-    {
-      add = add + 2;
-    }
+    int add = check_switchers();
     for(int i=0; i<26; i=i+1)
     {
       view.ChangeSpriteColor(letters[i], view.white);
@@ -57,10 +49,23 @@ public class LetterController : IsEnd
           current_letter = current_letter + 1;
           current = current.next;
         }
-        Debug.Log(letters[i+add].name);
         view.ChangeSpriteColor(letters[i+add], view.yellow);
       }
     }
+  }
+
+  private int check_switchers()
+  {
+    int add = 0;
+    if(switchers[0].GetComponent<SwitchModel>().isOn)
+    {
+      add = add + 1;
+    }
+    if(switchers[1].GetComponent<SwitchModel>().isOn)
+    {
+      add = add + 2;
+    }
+    return add;
   }
 
   private void init_password_letters()
