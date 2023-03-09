@@ -10,7 +10,7 @@ public class LetterController : IsEnd
   private GameObject[] switchers = new GameObject[2];
   private GameObject[] buttons = new GameObject[26];
   private GameObject[] letters = new GameObject[26];
-  private GameObject[] password_letters = new GameObject[4];
+  private GameObject[] password_letters = new GameObject[6];
   private int current_letter = 0;
   private int offset = 97;
 
@@ -71,10 +71,12 @@ public class LetterController : IsEnd
 
   private void init_password_letters()
   {
-    password_letters[0] = GameObject.Find("T");
-    password_letters[1] = GameObject.Find("I");
-    password_letters[2] = GameObject.Find("M");
+    password_letters[0] = GameObject.Find("S");
+    password_letters[1] = GameObject.Find("C");
+    password_letters[2] = GameObject.Find("R");
     password_letters[3] = GameObject.Find("E");
+    password_letters[4] = GameObject.Find("A");
+    password_letters[5] = GameObject.Find("M");
   }
 
   private void init_password_array()
@@ -83,19 +85,27 @@ public class LetterController : IsEnd
     current = head;
 
     Element element = head;
-    element.value = (int)('t') - offset;
+    element.value = (int)('s') - offset;
     element.next = new Element();
     element = element.next;
 
-    element.value = (int)('i') - offset;
+    element.value = (int)('c') - offset;
     element.next = new Element();
     element = element.next;
 
-    element.value = (int)('m') - offset;
+    element.value = (int)('r') - offset;
     element.next = new Element();
     element = element.next;
 
     element.value = (int)('e') - offset;
+    element.next = new Element();
+    element = element.next;
+
+    element.value = (int)('a') - offset;
+    element.next = new Element();
+    element = element.next;
+
+    element.value = (int)('m') - offset;
     element.next = new Element();
     element = element.next;
 
