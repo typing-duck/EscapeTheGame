@@ -35,7 +35,7 @@ public class VolumeController : MonoBehaviour
               }
             if(many == 2)
               {
-               view.ChangeColorFilter(model.currentColorAdjustments, view.blended);
+               view.ChangeColorFilter(model.currentColorAdjustments, view.blended_purple);
               }
            }
        }

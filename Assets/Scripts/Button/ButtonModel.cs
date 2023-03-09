@@ -5,5 +5,4 @@ using UnityEngine;
 public class ButtonModel : BaseModel
 {
    public bool isOn = false;
-   public bool isInRange = false;
 }

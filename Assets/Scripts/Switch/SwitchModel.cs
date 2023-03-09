@@ -7,5 +7,4 @@ public class SwitchModel : BaseModel
    public bool isOn = false;
    public bool isPositionImportant = false;
    public bool shouldBeOn = true;
-   public bool isInRange = false;
 }
