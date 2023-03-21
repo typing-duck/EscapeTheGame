@@ -30,17 +30,17 @@ public class ExitCheckController : MonoBehaviour
 
    if(model.openExit)
    {
-    view.ChangeSprite(door, view.doorOpen);
+     view.ChangeSprite(door, view.doorOpen);
    }
    else
    {
-    view.ChangeSprite(door, view.doorClose);
+     view.ChangeSprite(door, view.doorClose);
    }
 
    model.openExit = true;
    foreach(IsEnd obj in allEndObjects)
    {
-    if(obj.Done() == false)
+    if(!obj.Done())
     {
       model.openExit = false;
       break;

@@ -5791,7 +5791,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 997bcd620a46a0c348e18f47b252a4c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactKey: 101
 --- !u!114 &1604960089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5841,7 +5840,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c200903cc0c5fc98aff5b95687729a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactKey: 101
 --- !u!114 &1604960093
 MonoBehaviour:
   m_ObjectHideFlags: 0

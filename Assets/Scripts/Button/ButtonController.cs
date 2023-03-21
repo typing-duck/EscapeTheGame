@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonController : MonoBehaviour
+public class ButtonController : BaseController
 {
   private ButtonModel[] models;
-  public KeyCode interactKey = KeyCode.E; 
 
   void Start()
   {
@@ -20,7 +19,7 @@ public class ButtonController : MonoBehaviour
         {
           HandleCollision(model);
         }
-        if(model.isInRange && Input.GetKeyDown(interactKey))
+        if(model.isInRange && interactKeyPressed())
         {
 	        StartCoroutine(Press(model));   
         }

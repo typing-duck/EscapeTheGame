@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class SwitchController : IsEnd
 {
-  private SwitchModel[] models;
-  public KeyCode interactKey = KeyCode.E; 
+  private SwitchModel[] models; 
 
   void Start()
   {
-   models = GameObject.FindObjectsOfType<SwitchModel>();
+    models = GameObject.FindObjectsOfType<SwitchModel>();
   }
 
   override public bool Done()
@@ -28,7 +27,7 @@ public class SwitchController : IsEnd
     {
       foreach(SwitchModel model in models)
       {
-        if(model.isInRange && Input.GetKeyDown(interactKey))
+        if(model.isInRange && interactKeyPressed())
         {
 	        Switch(model);   
         }
