@@ -4774,7 +4774,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6a2cf0ae30e02ca8bf96f3371fb205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcherAdd: {fileID: 375571832}
+  switchers:
+  - {fileID: 375571832}
 --- !u!212 &1451726534
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5149,7 +5150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6a2cf0ae30e02ca8bf96f3371fb205, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcherAdd: {fileID: 1782354961}
+  switchers:
+  - {fileID: 1782354961}
 --- !u!1 &1588352282
 GameObject:
   m_ObjectHideFlags: 0
