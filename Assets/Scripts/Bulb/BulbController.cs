@@ -9,7 +9,7 @@ public class BulbController : MonoBehaviour
   private BulbModel[] models;
   private BulbView view;
 
-  private bool allSwitchesOn = false;
+  private int switchersOnCount;
 
   void Start()
   {
@@ -21,16 +21,15 @@ public class BulbController : MonoBehaviour
   {
    foreach(BulbModel model in models)
    {
-    allSwitchesOn = true;
+    switchersOnCount = 0;
     foreach(GameObject switcher in model.switchers)
     {
-       if(switcher.GetComponent<SwitchModel>().isOn == false)
+       if(switcher.GetComponent<SwitchModel>().isOn)
        {
-        allSwitchesOn = false;
-        break;
+        switchersOnCount++;
        }
      }
-     if(allSwitchesOn == true)
+     if(switchersOnCount% 2 != 0)
      {
       view.ChangeSprite(model.gameObject, view.bulbOn);
      }
