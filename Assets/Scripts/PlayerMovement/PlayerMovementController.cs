@@ -5,10 +5,16 @@ public class PlayerMovementController : MonoBehaviour
     private PlayerMovementModel model;
     private PlayerMovementView view;
 
+    public float normalMoveSpeed = 1f;
+    public float fasterMoveSpeed =  2f;
+    public float currentMoveSpeed;
+    public KeyCode fasterKey = KeyCode.LeftShift;
+
     void Start()
     {
      model = GameObject.FindObjectOfType<PlayerMovementModel>();
      view = GameObject.FindObjectOfType<PlayerMovementView>();
+     currentMoveSpeed = normalMoveSpeed;
     }
 
     void Update()
@@ -42,6 +48,14 @@ public class PlayerMovementController : MonoBehaviour
           return;
         }
        }
-     model.rb.MovePosition(model.rb.position + model.movement * model.MoveSpeed * Time.fixedDeltaTime);
+      if(Input.GetKey(fasterKey))
+      {
+        currentMoveSpeed = fasterMoveSpeed;
+      }
+      else
+      {
+        currentMoveSpeed = normalMoveSpeed;
+      }
+     model.rb.MovePosition(model.rb.position + model.movement * currentMoveSpeed * Time.fixedDeltaTime);
     }
 }
