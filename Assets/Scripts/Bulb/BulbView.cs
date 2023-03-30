@@ -8,4 +8,10 @@ public class BulbView : BaseView
 {
   public Sprite bulbOn;
   public Sprite bulbOff;
+
+  void Start()
+  {
+    bulbOn = Resources.Load<Sprite>("bulb_on");
+    bulbOff = Resources.Load<Sprite>("bulb_off");
+  }
 }

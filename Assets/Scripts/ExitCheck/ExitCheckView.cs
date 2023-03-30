@@ -8,9 +8,15 @@ public class ExitCheckView : BaseView
   public Sprite doorOpen;
   public Sprite doorClose;
 
+  void Start()
+  {
+    doorOpen = Resources.Load<Sprite>("door_open");
+    doorClose = Resources.Load<Sprite>("door_close");
+  }
+
   public void LoadNextLevel()
   {
-   if(SceneManager.GetActiveScene().buildIndex < 3)
+   if(SceneManager.GetActiveScene().buildIndex < 6)
    {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
    }
