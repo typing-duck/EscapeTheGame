@@ -805,6 +805,10 @@ PrefabInstance:
       propertyPath: isPositionImportant
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1782354963, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1081277504531279042, guid: c8001daae29ffebcb85cf8090916c5d2, type: 3}
       propertyPath: isPositionImportant
       value: 1
@@ -1392,7 +1396,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 530871462}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
