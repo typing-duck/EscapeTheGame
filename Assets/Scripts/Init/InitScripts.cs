@@ -44,6 +44,7 @@ public class InitScripts : MonoBehaviour
        if(GameObject.FindObjectOfType<SwitchModel>() != null)
        {
          controllers.AddComponent<SwitchController>();
+         views.AddComponent<SwitchView>();
        }
        if(GameObject.FindObjectOfType<VolumeModel>() != null)
        {

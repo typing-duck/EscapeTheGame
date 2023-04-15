@@ -5,10 +5,12 @@ using UnityEngine;
 public class SwitchController : IsEnd
 {
   private SwitchModel[] models; 
+  private SwitchView view;
 
   void Start()
   {
     models = GameObject.FindObjectsOfType<SwitchModel>();
+    view = GameObject.FindObjectOfType<SwitchView>();
   }
 
   override public bool Done()
@@ -41,6 +43,14 @@ public class SwitchController : IsEnd
   public void Switch(SwitchModel model)
    {
      model.isOn = !model.isOn;
+     if(model.isOn == true)
+     {
+      view.ChangeSprite(model.gameObject, view.switchOn);
+     }
+     else
+     {
+      view.ChangeSprite(model.gameObject, view.switchOff);
+     }
      Debug.Log("Change");
    }
 
