@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System;
 
 public class InitScripts : MonoBehaviour 
 {
@@ -7,49 +8,25 @@ public class InitScripts : MonoBehaviour
     {
       GameObject controllers = GameObject.Find("Controllers");
       GameObject views = GameObject.Find("Views");
+      Type[,] AllClasses = new Type[,] {
+        {typeof(BulbModel), typeof(BulbView), typeof(BulbController)},
+        {typeof(ButtonModel), typeof(ButtonView), typeof(ButtonController)},
+        {typeof(ExitCheckModel), typeof(ExitCheckView), typeof(ExitCheckController)},
+        {typeof(LetterModel), typeof(LetterView), typeof(LetterController)},
+        {typeof(PlayerMovementModel), typeof(PlayerMovementView), typeof(PlayerMovementController)},
+        {typeof(PositionCheckModel), typeof(PositionCheckView), typeof(PositionCheckController)},
+        {typeof(ShowHiddenModel), typeof(ShowHiddenView), typeof(ShowHiddenController)},
+        {typeof(SwitchModel), typeof(SwitchView), typeof(SwitchController)},
+        {typeof(VolumeModel), typeof(VolumeView), typeof(VolumeController)}
+        };
 
-       if(GameObject.FindObjectOfType<BulbModel>() != null)
-       {
-         controllers.AddComponent<BulbController>();
-         views.AddComponent<BulbView>();
-       }
-       if(GameObject.FindObjectOfType<ButtonModel>() != null)
-       {
-        controllers.AddComponent<ButtonController>();
-       }
-       if(GameObject.FindObjectOfType<ExitCheckModel>() != null)
-       {
-         controllers.AddComponent<ExitCheckController>();
-         views.AddComponent<ExitCheckView>();
-       }
-       if(GameObject.FindObjectOfType<LetterModel>() != null)
-       {
-         controllers.AddComponent<LetterController>();
-         views.AddComponent<LetterView>();
-       }
-       if(GameObject.FindObjectOfType<PlayerMovementModel>() != null)
-       {
-         controllers.AddComponent<PlayerMovementController>();
-         views.AddComponent<PlayerMovementView>();
-       }
-       if(GameObject.FindObjectOfType<PositionCheckModel>() != null)
-       {
-         controllers.AddComponent<PositionCheckController>();
-       }
-       if(GameObject.FindObjectOfType<ShowHiddenModel>() != null)
-       {
-         controllers.AddComponent<ShowHiddenController>();
-         views.AddComponent<ShowHiddenView>();
-       }
-       if(GameObject.FindObjectOfType<SwitchModel>() != null)
-       {
-         controllers.AddComponent<SwitchController>();
-         views.AddComponent<SwitchView>();
-       }
-       if(GameObject.FindObjectOfType<VolumeModel>() != null)
-       {
-         controllers.AddComponent<VolumeController>();
-         views.AddComponent<VolumeView>();
-       }
+      for(int row=0; row<AllClasses.GetLength(0); row++)
+      {
+        if(GameObject.FindObjectOfType(AllClasses[row,0]) != null)
+        {
+          views.AddComponent(AllClasses[row,1]);
+          controllers.AddComponent(AllClasses[row,2]);
+        }
+      }
     }
 }
