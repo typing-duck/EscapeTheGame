@@ -6,8 +6,9 @@ public class InitScripts : MonoBehaviour
 {
     void Start ()
     {
-      GameObject controllers = GameObject.Find("Controllers");
-      GameObject views = GameObject.Find("Views");
+      GameObject controllers = new GameObject("Controllers");
+      GameObject views = new GameObject("Views");
+      
       Type[,] AllClasses = new Type[,] {
         {typeof(BulbModel), typeof(BulbView), typeof(BulbController)},
         {typeof(ButtonModel), typeof(ButtonView), typeof(ButtonController)},
