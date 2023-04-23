@@ -16,7 +16,7 @@ public class ExitCheckView : BaseView
 
   public void LoadNextLevel()
   {
-   if(SceneManager.GetActiveScene().buildIndex < 6)
+   if(SceneManager.GetActiveScene().buildIndex < 7)
    {
     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
    }
