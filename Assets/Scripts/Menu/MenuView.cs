@@ -21,7 +21,7 @@ public class MenuView : MonoBehaviour
     SpriteRenderer spriteRenderer = table.GetComponent<SpriteRenderer>();
     if(open == true)
     {
-      spriteRenderer.sortingOrder = 2;
+      spriteRenderer.sortingOrder = 3;
     }
     else
     {
