@@ -17,4 +17,34 @@ public class BaseView : MonoBehaviour
   {
     obj.GetComponent<SpriteRenderer>().sprite = newSprite;
   }
+
+  public void ShowObject(GameObject obj)
+  {
+    obj.GetComponent<Renderer>().enabled = true;
+    for(int i=0; i < obj.transform.childCount; i++)
+    {
+      GameObject child = obj.transform.GetChild(i).gameObject;
+      child.GetComponent<Renderer>().enabled = true;
+    }
+  }
+
+  public void HideObject(GameObject obj)
+  {
+    obj.GetComponent<Renderer>().enabled = false;
+    for(int i=0; i < obj.transform.childCount; i++)
+    {
+      GameObject child = obj.transform.GetChild(i).gameObject;
+      child.GetComponent<Renderer>().enabled = false;
+    }
+  }
+
+  public void ChangeObjectVisibility(GameObject obj)
+  {
+    obj.GetComponent<Renderer>().enabled = !obj.GetComponent<Renderer>().enabled;
+    for(int i=0; i < obj.transform.childCount; i++)
+    {
+      GameObject child = obj.transform.GetChild(i).gameObject;
+      child.GetComponent<Renderer>().enabled = !child.GetComponent<Renderer>().enabled;
+    }
+  }
 }

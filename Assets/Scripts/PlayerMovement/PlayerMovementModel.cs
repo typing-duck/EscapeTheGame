@@ -7,9 +7,12 @@ public class PlayerMovementModel : MonoBehaviour
     public Animator animator;
     public Vector2 movement;
     public List<GameObject> blackoutSwitchers = new List<GameObject>();
+    public bool canMove;
 
     void Start()
     {
+      canMove = true;
+      
       GameObject[] allObjects = UnityEngine.Object.FindObjectsOfType<GameObject>();
       foreach(GameObject obj in allObjects)
       {

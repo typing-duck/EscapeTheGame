@@ -19,6 +19,10 @@ public class PlayerMovementController : MonoBehaviour
 
     void Update()
     {
+      if(model.canMove == false)
+      {
+        return;
+      }
       foreach(GameObject switcher in model.blackoutSwitchers)
        {
         if(switcher.GetComponent<SwitchModel>().isOn == true)
@@ -41,6 +45,10 @@ public class PlayerMovementController : MonoBehaviour
 
     void FixedUpdate()
     {
+     if(model.canMove == false)
+     {
+      return;
+     }
      foreach(GameObject switcher in model.blackoutSwitchers)
        {
         if(switcher.GetComponent<SwitchModel>().isOn == true)

@@ -1,11 +1,18 @@
 using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
+using System.IO;
 
 public class InitScripts : MonoBehaviour 
 {
     void Start ()
     {
+      using (TextWriter writer = File.CreateText("SavedLevel.txt"))
+      {
+        writer.WriteLine(SceneManager.GetActiveScene().buildIndex);
+      }
+
       GameObject controllers = new GameObject("Controllers");
       GameObject views = new GameObject("Views");
       
@@ -13,6 +20,7 @@ public class InitScripts : MonoBehaviour
         {typeof(BulbModel), typeof(BulbView), typeof(BulbController)},
         {typeof(ButtonModel), typeof(ButtonView), typeof(ButtonController)},
         {typeof(ExitCheckModel), typeof(ExitCheckView), typeof(ExitCheckController)},
+        {typeof(GameMenuModel), typeof(GameMenuView), typeof(GameMenuController)},
         {typeof(LetterModel), typeof(LetterView), typeof(LetterController)},
         {typeof(PlayerMovementModel), typeof(PlayerMovementView), typeof(PlayerMovementController)},
         {typeof(PositionCheckModel), typeof(PositionCheckView), typeof(PositionCheckController)},
