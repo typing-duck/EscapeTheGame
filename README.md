@@ -1,5 +1,7 @@
 # EscapeTheGame
 
+https://hackmd.io/VRkyxtPJSKqSTy4MkrRxRA?view
+
 ## **AMVCC (toptal.com)**
 
 GameObject Model zawiera wszystkie skrypty Model.\
