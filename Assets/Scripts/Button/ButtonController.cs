@@ -19,7 +19,7 @@ public class ButtonController : BaseController
         {
           HandleCollision(model);
         }
-        if(model.isInRange && interactKeyPressed())
+        if(model.isInRange && actionKeyPressed())
         {
 	        StartCoroutine(Press(model));   
         }

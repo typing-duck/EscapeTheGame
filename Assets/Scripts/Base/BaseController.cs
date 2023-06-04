@@ -6,11 +6,11 @@ using UnityEngine.Rendering.Universal;
 
 public class BaseController : MonoBehaviour
 {
-  private List<KeyCode> interactKeys = new List<KeyCode> {KeyCode.E, KeyCode.Space};
+  private List<KeyCode> actionKeys = new List<KeyCode> {KeyCode.E, KeyCode.Space};
 
-  public bool interactKeyPressed()
+  public bool actionKeyPressed()
   {
-     foreach(KeyCode key in interactKeys)
+     foreach(KeyCode key in actionKeys)
      {
         if(Input.GetKeyDown(key))
         {

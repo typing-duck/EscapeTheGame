@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SwitchController : IsEnd
+public class SwitchController : IsDone
 {
   private SwitchModel[] models; 
   private SwitchView view;
@@ -29,7 +29,7 @@ public class SwitchController : IsEnd
     {
       foreach(SwitchModel model in models)
       {
-        if(model.isInRange && interactKeyPressed())
+        if(model.isInRange && actionKeyPressed())
         {
 	        Switch(model);   
         }

@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LetterController : IsEnd
+public class LetterController : IsDone
 {
   private LetterView view;
 

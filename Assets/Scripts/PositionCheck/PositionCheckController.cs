@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PositionCheckController : IsEnd
+public class PositionCheckController : IsDone
 {
     private PositionCheckModel[] models;
 
