@@ -1099,8 +1099,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323494d20fb658a6987d762254ccb70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcherOn1: {fileID: 817462627}
-  switcherOn2: {fileID: 0}
+  switchers:
+  - {fileID: 817462627}
   layerToMove: 4
 --- !u!1001 &817462624
 PrefabInstance:
@@ -2203,8 +2203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323494d20fb658a6987d762254ccb70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcherOn1: {fileID: 1499681114}
-  switcherOn2: {fileID: 817462627}
+  switchers:
+  - {fileID: 1499681114}
+  - {fileID: 817462627}
   layerToMove: 2
 --- !u!1001 &1499681111
 PrefabInstance:
@@ -2642,8 +2643,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323494d20fb658a6987d762254ccb70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcherOn1: {fileID: 1499681114}
-  switcherOn2: {fileID: 817462627}
+  switchers:
+  - {fileID: 1499681114}
+  - {fileID: 817462627}
   layerToMove: 2
 --- !u!1 &2091721143
 GameObject:
@@ -2742,8 +2744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323494d20fb658a6987d762254ccb70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcherOn1: {fileID: 817462627}
-  switcherOn2: {fileID: 0}
+  switchers:
+  - {fileID: 817462627}
   layerToMove: 4
 --- !u!1 &2106416635
 GameObject:

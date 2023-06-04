@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShowHiddenModel : MonoBehaviour
 {
-    public GameObject switcherOn1;
-    public GameObject switcherOn2;
+    public List<GameObject> switchers = new List<GameObject>();
     public int layerToMove = 2;
 }

@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class MainMenuView : BaseView
 {
+  void Start()
+  {
+    Cursor.visible = false;
+  }
+  
   public void MoveFrame(GameObject border, string direction)
   {
     if(direction == "up")

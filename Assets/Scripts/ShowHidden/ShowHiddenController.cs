@@ -17,24 +17,15 @@ public class ShowHiddenController : MonoBehaviour
   {
     foreach(ShowHiddenModel model in models)
     {
-     view.MoveToLayer(model, 0);
-     if(model.switcherOn1??true)
+     view.MoveToLayer(model, model.layerToMove);
+     foreach(GameObject switcher in model.switchers)
+     {
+      if(switcher.GetComponent<SwitchModel>().isOn == false)
       {
-       if(model.switcherOn1.GetComponent<SwitchModel>().isOn)
-         {
-          if(model.switcherOn2??true)
-            {
-             if(model.switcherOn2.GetComponent<SwitchModel>().isOn)
-               {
-                view.MoveToLayer(model, model.layerToMove);
-               }
-            }
-          else
-            {
-             view.MoveToLayer(model, model.layerToMove);
-            }
-         }   
+        view.MoveToLayer(model, 0);
+        break;
       }
+     }
     }
   }
 }

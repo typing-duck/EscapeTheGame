@@ -1836,8 +1836,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 323494d20fb658a6987d762254ccb70b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  switcherOn1: {fileID: 28803344}
-  switcherOn2: {fileID: 0}
+  switchers:
+  - {fileID: 28803344}
   layerToMove: 2
 --- !u!1001 &1190698971
 PrefabInstance:
