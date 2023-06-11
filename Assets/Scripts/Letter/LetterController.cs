@@ -1,18 +1,20 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class LetterController : IsDone
 {
+  private LetterModel model;
   private LetterView view;
 
   private GameObject[] switchers = new GameObject[2];
   private GameObject[] buttons = new GameObject[26];
   private GameObject[] letters = new GameObject[26];
-  private GameObject[] password_letters = new GameObject[6];
+  private List<GameObject> password_letters = new List<GameObject>();
   private int current_letter = 0;
-  private int offset = 97;
+  private int offset = 65;
 
   class Element
   {
@@ -24,6 +26,7 @@ public class LetterController : IsDone
 
   void Start()
   {
+    model = GameObject.FindObjectOfType<LetterModel>();
     view = GameObject.FindObjectOfType<LetterView>();
 
     init_password_letters();
@@ -46,9 +49,10 @@ public class LetterController : IsDone
       {
         if(i+add == current.value)
         {
-          view.ChangeSpriteColor(password_letters[current_letter], view.black);
+          view.ChangeSpriteColor(password_letters.ElementAt(current_letter), view.black);
           current_letter = current_letter + 1;
           current = current.next;
+          break;
         }
         view.ChangeSpriteColor(letters[i+add], view.yellow);
       }
@@ -71,12 +75,14 @@ public class LetterController : IsDone
 
   private void init_password_letters()
   {
-    password_letters[0] = GameObject.Find("S");
-    password_letters[1] = GameObject.Find("C");
-    password_letters[2] = GameObject.Find("R");
-    password_letters[3] = GameObject.Find("E");
-    password_letters[4] = GameObject.Find("A");
-    password_letters[5] = GameObject.Find("M");
+    string letter_to_found;
+    GameObject letter_found;
+    for(int i=0; i<model.password.Length; i++)
+    {
+     letter_to_found = model.password.Substring(i,1);
+     letter_found = GameObject.Find(letter_to_found);
+     password_letters.Add(letter_found);
+    }
   }
 
   private void init_password_array()
@@ -85,49 +91,32 @@ public class LetterController : IsDone
     current = head;
 
     Element element = head;
-    element.value = (int)('s') - offset;
-    element.next = new Element();
-    element = element.next;
 
-    element.value = (int)('c') - offset;
-    element.next = new Element();
-    element = element.next;
-
-    element.value = (int)('r') - offset;
-    element.next = new Element();
-    element = element.next;
-
-    element.value = (int)('e') - offset;
-    element.next = new Element();
-    element = element.next;
-
-    element.value = (int)('a') - offset;
-    element.next = new Element();
-    element = element.next;
-
-    element.value = (int)('m') - offset;
-    element.next = new Element();
-    element = element.next;
-
+    char letter;
+    for(int i=0; i<model.password.Length; i++)
+    {
+      letter = model.password[i];
+      element.value = (int)(letter) - offset;
+      element.next = new Element();
+      element = element.next;
+    }
     element.value = -1; //end
     element.next = null;
   }
 
   private void init_buttons()
   {
-    string Button_ = "Button_";
     for(int i=0; i<25; i=i+4)
     {
-      buttons[i] = GameObject.FindGameObjectWithTag(Button_ + (char)(offset + i));
+      buttons[i] = GameObject.FindGameObjectWithTag("Button_" + (char)(offset + i));
     }
   }
 
   private void init_letters()
   {
-    string letter_ = "letter_";
     for(int i=0; i<26; i++)
     {
-     letters[i] = GameObject.Find(letter_ + (char)(offset + i));
+     letters[i] = GameObject.Find("letter_" + (char)(offset + i));
     }
   }
 

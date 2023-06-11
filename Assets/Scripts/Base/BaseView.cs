@@ -18,6 +18,11 @@ public class BaseView : MonoBehaviour
     obj.GetComponent<SpriteRenderer>().sprite = newSprite;
   }
 
+  public void ChangeSpriteColor(GameObject obj, Color32 new_color)
+  {
+    obj.GetComponent<SpriteRenderer>().color = new_color;
+  }
+
   public void ShowObject(GameObject obj)
   {
     obj.GetComponent<Renderer>().enabled = true;
