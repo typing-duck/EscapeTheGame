@@ -29,11 +29,15 @@ public class LetterController : IsDone
     model = GameObject.FindObjectOfType<LetterModel>();
     view = GameObject.FindObjectOfType<LetterView>();
 
-    init_password_letters();
     init_password_array();
     init_buttons();
     init_letters();
     init_swithers();
+
+    if(model.is_password_visible)
+    {
+      init_password_letters();
+    }
   }
 
   void Update()
@@ -49,7 +53,10 @@ public class LetterController : IsDone
       {
         if(i+add == current.value)
         {
-          view.ChangeSpriteColor(password_letters.ElementAt(current_letter), view.black);
+          if(model.is_password_visible)
+          {
+           view.ChangeSpriteColor(password_letters.ElementAt(current_letter), view.black);
+          }
           current_letter = current_letter + 1;
           current = current.next;
           break;
