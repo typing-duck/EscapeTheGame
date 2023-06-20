@@ -4,13 +4,5 @@ using UnityEngine;
 
 public class RotationModel : BaseModel
 {
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
+  public int rotationsTooFar = 0;
 }

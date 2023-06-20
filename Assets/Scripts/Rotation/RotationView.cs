@@ -4,13 +4,8 @@ using UnityEngine;
 
 public class RotationView : BaseView
 {
-    void Start()
+    public void Rotate90(GameObject obj, int currentRotationsTooFar)
     {
-        
-    }
-
-    void Update()
-    {
-        
+      obj.transform.Rotate(0f,0f,-90f);
     }
 }

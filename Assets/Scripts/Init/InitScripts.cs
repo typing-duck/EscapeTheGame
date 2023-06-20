@@ -24,6 +24,7 @@ public class InitScripts : MonoBehaviour
         {typeof(LetterModel), typeof(LetterView), typeof(LetterController)},
         {typeof(PlayerMovementModel), typeof(PlayerMovementView), typeof(PlayerMovementController)},
         {typeof(PositionCheckModel), typeof(PositionCheckView), typeof(PositionCheckController)},
+        {typeof(RotationModel), typeof(RotationView), typeof(RotationController)},
         {typeof(ShowHiddenModel), typeof(ShowHiddenView), typeof(ShowHiddenController)},
         {typeof(SwitchModel), typeof(SwitchView), typeof(SwitchController)},
         {typeof(VolumeModel), typeof(VolumeView), typeof(VolumeController)}
