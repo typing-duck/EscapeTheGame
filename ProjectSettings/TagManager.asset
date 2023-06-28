@@ -26,6 +26,7 @@ TagManager:
   - Button_Q
   - Button_U
   - Button_Y
+  - MainMusic
   layers:
   - Default
   - TransparentFX

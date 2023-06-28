@@ -9,6 +9,8 @@ public class MainMenuController : MonoBehaviour
     private MainMenuModel model;
     private MainMenuView view;
 
+    public MainMusicController mainMusic;
+
     private GameObject optionsTable;
     private GameObject frame;
 
@@ -17,8 +19,11 @@ public class MainMenuController : MonoBehaviour
      model = GameObject.FindObjectOfType<MainMenuModel>();
      view = GameObject.FindObjectOfType<MainMenuView>();
 
+     mainMusic = GameObject.FindObjectOfType<MainMusicController>();
+
      optionsTable = GameObject.Find("OptionsTable");
      frame = GameObject.Find("Frame");
+     mainMusic.PauseMainMusic();
     }
 
     void Update()
@@ -39,6 +44,7 @@ public class MainMenuController : MonoBehaviour
          if(model.GetMenuOption() == "Continue")
          {
            int index = CurrentSavedLevelIndex();
+           mainMusic.PlayMainMusic();
            if(index > 0)
            {
              SceneManager.LoadScene(index);
@@ -50,6 +56,7 @@ public class MainMenuController : MonoBehaviour
          }
          else if(model.GetMenuOption() == "NewGame")
          {
+           mainMusic.PlayMainMusic();
            SceneManager.LoadScene(1);
          }
          else if(model.GetMenuOption() == "Options")
